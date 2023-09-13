@@ -1,0 +1,122 @@
+@use "../../utils/utils" as *;
+
+.header01 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    .innerHeader {
+        display: flex;
+        justify-content: space-between;
+        height: 90px;
+        padding: 32px 32px 24px;
+        background: $white-color;
+        @include mq() {
+            height: 58px;
+            padding: 16px 0 0 20px; 
+        }
+        .logo {
+            height: 40px;
+            @include mq() {
+                width: auto;
+                height: 30px;
+            }
+        }
+        ul {
+            display: flex;
+            gap: 0 40px;
+            @include mq() {
+                display: none;
+            }
+            li {
+                a {
+                    font-size: 16px;
+                    font-family: 'Josefin Sans', sans-serif;
+                    &:hover {
+                        color: $primary-color;
+                        padding: 0 0 8px 0;
+                        border-bottom: 1px solid $primary-color;
+                    }
+                }
+                .active {
+                    color: $primary-color;
+                    padding: 0 0 8px 0;
+                    border-bottom: 1px solid $primary-color;
+                }
+            }
+        }
+    }
+}
+
+
+// 旧スタイル
+// .header01 {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     z-index: 1000;
+//     .innerHeader {
+//         height: 58px;
+//         padding: 16px 0 0 20px; 
+//         background: $white-color;
+//         .logo {
+//             width: auto;
+//             height: 30px;
+//         }
+//         ul {
+//             display: none;
+//         }
+//     }
+//     @media screen and (min-width:768px) {
+//         .innerHeader {
+//             display: flex;
+//             justify-content: space-between;
+//             padding: 16px 20px 0 20px; 
+//             ul {
+//                 display: flex;
+//                 li {
+//                     margin: 0 0 0 16px;
+//                     a {
+//                         font-size: 12px;
+//                         font-family: 'Josefin Sans', sans-serif;
+//                         &:hover {
+//                             color: $primary-color;
+//                             padding: 0 0 4px 0;
+//                             border-bottom: 1px solid $primary-color;
+//                         }
+//                     }
+//                     .active {
+//                         color: $primary-color;
+//                         padding: 0 0 4px 0;
+//                         border-bottom: 1px solid $primary-color;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//     @media screen and (min-width:px) {
+//         .innerHeader {
+//             height: 90px;
+//             padding: 32px 32px 24px;
+//             .logo {
+//                 height: 40px;
+//             }
+//             ul {
+//                 li {
+//                     margin: 0 0 0 32px;
+//                     a {
+//                         font-size: 16px;
+//                         &:hover {
+//                             padding: 0 0 8px 0;
+//                         }
+//                     }
+//                     .active {
+//                         padding: 0 0 8px 0;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

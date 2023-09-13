@@ -1,0 +1,8 @@
+@use "../utils/utils" as *;
+
+.top {
+    margin: 90px auto;
+    @include mq() {
+        margin: 58px auto;
+    }
+}

@@ -1,0 +1,446 @@
+@use "../../utils/utils" as *;
+
+.footer01 {
+    color: $white-color;
+    background: $base-color;
+    .innerFooter {
+        width: calc(100% - 80px);
+        margin: 0 auto;
+        padding: 70px 0 24px;
+        @media screen and (min-width:1366px) {
+            width: 1200px;
+        }
+        .footerHead {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 0 80px 0;
+            @include mq() {
+                margin: 0;
+            }
+            .logo {
+                display: block;
+                width: 120px;
+                @include mq() {
+                    width: 100px;
+                    margin: 0 0 30px 0;
+                }
+            }
+            .footerNavi {
+                display: flex;
+                gap: 0 40px;
+                @include mq() {
+                    display: none;
+                }
+                li {
+                    a {
+                        font-size: 14px;
+                        font-family: 'Josefin Sans', sans-serif;
+                        color: $white-color;
+                        &:hover {
+                            color: $primary-color;
+                            padding: 0 0 12px 0;
+                            border-bottom: 1px solid $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+        .footerMain {
+            display: flex;
+            gap: 0 80px;
+            margin: 0 0 80px 0;
+            .companyDetail {
+                h4 {
+                    font-size: 14px;
+                    margin: 0 0 24px 0;
+                }
+                p {
+                    font-size: 11px;
+                    line-height: 2;
+                    letter-spacing: 1px;
+                    margin: 0 0 30px 0;
+                }
+                h4, p {
+                    font-weight: 300;
+                }
+                .tabFlex {
+                    display: block;
+                    p {
+                        margin: 0 0 32px 0;
+                    }
+                }
+            }
+            .spSitemap {
+                display: none;
+                @include mq() {
+                    display: block;
+                    a {
+                        color: $white-color;
+                        text-decoration: underline;
+                    }
+                    // more btn
+                    .sitemapHide {
+                        display: none;
+                        ul {
+                            margin: 0 0 24px 0;
+                            li {
+                                display: flex;
+                                margin: 0 0 12px 0;
+                                &:last-child {
+                                    margin: 0;
+                                }
+                                .icon {
+                                    display: block;
+                                    margin: 0 14px 0 0;
+                                    position: relative;
+                                    bottom: 2px;
+                                }
+                                .emptyIcon {
+                                    margin: 0 14px 0 0;
+                                }
+                                a {
+                                    text-decoration: none;
+                                    font-size: 11px;
+                                    font-family: 'Josefin Sans', sans-serif;
+                                }
+                            }
+                        }
+                        .lastList {
+                            margin: 0
+                        }
+                    }
+                    .sitemapMore {
+                        display: block;
+                        font-size: 11px;
+                        text-decoration: underline;
+                        color: $white-color;
+                        background: none;
+                        margin: 0 0 20px 0;
+                        border: none;
+                        outline: 0;
+                        transition: .5s;
+                    }
+                    .sitemapMore::after {
+                        content: "サイトマップをみる";
+                        transition: .2s;
+                    }
+                    .sitemapMore.on-click::after{
+                        content: "サイトマップをとじる";
+                    }
+                }
+            }
+            .pcSitemap {
+                display: flex;
+                gap: 0 80px;
+                margin: 0;
+                @include mq() {
+                    display: none;
+                }
+                a {
+                    color: $white-color;
+                }
+                .flexSitemap {
+                    ul {
+                        margin: 0 0 20px 0;
+                        li {
+                            display: flex;
+                            gap: 0 10px;
+                            margin: 0 0 20px 0;
+                            .icon {
+                                display: block;
+                                margin: 0 14px 0 0;
+                                position: relative;
+                                bottom: 2px;
+                            }
+                            .emptyIcon {
+                                margin: 0 14px 0 0;
+                            }
+                            a {
+                                text-decoration: none;
+                                font-size: 14px;
+                                font-family: 'Josefin Sans', sans-serif;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .copyright {
+            text-align: center;
+            font-size: 12px;
+            span {
+                font-size: 16px;
+                margin: 0 4px 0 0;
+                position: relative;
+                top: 2px;
+            }
+            @include mq() {
+                font-size: 10px;
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+
+// 旧スタイル
+// .footer01 {
+//     padding: 40px 20px;
+//     color: $white-color;
+//     background: $base-color;
+//     .footerHead {
+//         .logo {
+//             display: block;
+//             width: 100px;
+//             margin: 0 0 30px 0;
+//         }
+//         .footerNavi {
+//             display: none;
+//         }
+//     }
+//     .footerMain {
+//         .companyDetail {
+//             h4 {
+//                 font-size: 14px;
+//                 margin: 0 0 24px 0;
+//             }
+//             p {
+//                 font-size: 11px;
+//                 line-height: 2;
+//                 letter-spacing: 1px;
+//                 margin: 0 0 30px 0;
+//             }
+//             h4, p {
+//                 font-weight: 300;
+//             }
+//             .spSitemap {
+//                 margin: 0 0 80px 0;
+//                 a {
+//                     color: $white-color;
+//                     text-decoration: underline;
+//                 }
+//                 // more btn
+//                 .sitemapHide {
+//                     display: none;
+//                     ul {
+//                         margin: 0 0 24px 0;
+//                         li {
+//                             display: flex;
+//                             margin: 0 0 12px 0;
+//                             .icon {
+//                                 display: block;
+//                                 margin: 0 14px 0 0;
+//                                 position: relative;
+//                                 bottom: 2px;
+//                             }
+//                             .emptyIcon {
+//                                 margin: 0 14px 0 0;
+//                             }
+//                             a {
+//                                 text-decoration: none;
+//                                 font-size: 11px;
+//                                 font-family: 'Josefin Sans', sans-serif;
+//                             }
+//                         }
+//                     }
+//                 }
+//                 .sitemapMore {
+//                     display: block;
+//                     font-size: 11px;
+//                     text-decoration: underline;
+//                     color: $white-color;
+//                     margin: 0 0 32px 0;
+//                     background: none;
+//                     border: none;
+//                     outline: 0;
+//                     transition: .5s;
+//                 }
+//                 .sitemapMore::after {
+//                     content: "サイトマップをみる";
+//                     transition: .2s;
+//                 }
+//                 .sitemapMore.on-click::after{
+//                     content: "サイトマップをとじる";
+//                 }
+//             }
+//         }
+//         .pcSitemap {
+//             display: none;
+//         }
+//     }
+//     .copyright {
+//         text-align: center;
+//         font-size: 10px;
+//         span {
+//             font-size: 14px;
+//             margin: 0 4px 0 0;
+//             position: relative;
+//             top: 2px;
+//         }
+//     }
+    
+//     @media screen and (min-width:768px) {
+//         .footerMain {
+//             .companyDetail {
+//                 margin: 0 0 40px 0;
+//                 .tabFlex {
+//                     display: flex;
+//                     p {
+//                         margin: 0 40px 0 0;
+//                     }
+//                 }
+//                 .spSitemap {
+//                     display: none;
+//                 }
+//             }
+//             .pcSitemap {
+//                 display: flex;
+//                 margin: 0 0 40px 0;
+//                 a {
+//                     color: $white-color;
+//                 }
+//                 .flexSitemap {
+//                     ul {
+//                         margin: 0 48px 24px 0;
+//                         li {
+//                             display: flex;
+//                             margin: 0 0 12px 0;
+//                             .icon {
+//                                 display: block;
+//                                 margin: 0 14px 0 0;
+//                                 position: relative;
+//                                 bottom: 2px;
+//                             }
+//                             .emptyIcon {
+//                                 margin: 0 14px 0 0;
+//                             }
+//                             a {
+//                                 text-decoration: none;
+//                                 font-size: 11px;
+//                                 font-family: 'Josefin Sans', sans-serif;
+//                             }
+//                         }
+//                     }
+//                 }
+//                 .lastFlexSitemap {
+//                     ul {
+//                         margin: 0 0 24px 0;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//     @media screen and (min-width:1024px) {
+//         padding: 70px 0 24px;
+//         .innerFooter {
+//             width: calc(100% - 120px);
+//             margin: 0 auto;
+//             .footerHead {
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: space-between;
+//                 margin: 0 0 80px 0;
+//                 .logo {
+//                     width: 130px;
+//                     margin: 0;
+//                 }
+//                 .footerNavi {
+//                     display: flex;
+//                     li {
+//                         margin: 0 0 0 28px;
+//                         a {
+//                             font-size: 11px;
+//                             font-family: 'Josefin Sans', sans-serif;
+//                             color: $white-color;
+//                             &:hover {
+//                                 color: $primary-color;
+//                                 padding: 0 0 12px 0;
+//                                 border-bottom: 1px solid $primary-color;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//             .footerMain {
+//                 display: flex;
+//                 margin: 0 0 80px 0;
+//                 .companyDetail {
+//                     margin: 0 60px 0 0;
+//                     .tabFlex {
+//                         display: block;
+//                         p {
+//                             margin: 0 0 32px 0;
+//                         }
+//                     }
+//                 }
+//                 .pcSitemap {
+//                     margin: 0;
+//                     .flexSitemap {
+//                         ul {
+//                             margin: 0 40px 24px 0;
+//                         }
+//                     }
+//                     .lastFlexSitemap {
+//                         ul {
+//                             margin: 0 0 24px 0;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//     @media screen and (min-width:1366px) {
+//         .innerFooter {
+//             width: 1120px;
+//             .footerHead {
+//                 .logo {
+//                     width: 140px;
+//                 }
+//                 .footerNavi {
+//                     li {
+//                         margin: 0 0 0 48px;
+//                         a {
+//                             font-size: 13px;
+//                         }
+//                     }
+//                 }
+//             }
+//             .footerMain {
+//                 gap: 0 80px;
+//                 .companyDetail {
+//                     margin: 0;
+//                     h4 {
+//                         font-size: 16px;
+//                         margin: 0 0 32px 0;
+//                     }
+//                     p { 
+//                         font-size: 12px;
+//                         line-height: 2.1;
+//                         margin: 0 0 32px 0;
+//                     }
+//                 }
+//                 .pcSitemap {
+//                     .flexSitemap {
+//                         ul {
+//                             margin: 0 80px 30px 0;
+//                             li {
+//                                 margin: 0 0 14px 0;
+//                                 a {
+//                                     font-size: 12px;
+//                                 }
+//                             }
+//                         }
+//                     }
+//                     .lastFlexSitemap {
+//                         ul {
+//                             margin: 0 0 30px 0;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

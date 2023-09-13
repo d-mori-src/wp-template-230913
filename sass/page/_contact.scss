@@ -1,0 +1,645 @@
+@use "../utils/utils" as *;
+
+.contact {
+    margin: 90px auto;
+    @include mq() {
+        margin: 58px auto;
+    }
+    // ナビゲーション
+    .intro {
+        width: calc(100% - 40px);
+        margin: 0 auto 100px;
+        @include mq() {
+            margin: 0 auto 40px;
+        }
+        ul {
+            display: flex;
+            justify-content: center;
+            margin: 0 0 80px 0;
+            @include mq() {
+                margin: 0 0 40px 0;
+            }
+            li {
+                .icon {
+                    font-family: 'Poppins', sans-serif;
+                    color: #BFBFBF;
+                    margin: 0 0 13px 0;
+                    padding: 20px;
+                    border: 1px solid #ccc;
+                    border-radius: 50%;
+                    background: #F1F2F6;
+                    @include mq() {
+                        padding: 16px;
+                    }
+                }
+                .text {
+                    text-align: center;
+                    font-size: 12px;
+                    color: #2F253F;
+                    @include mq() {
+                        font-size: 11px;
+                    }
+                }
+            }
+            li.border {
+                width: 110px;
+                bottom: 48px;
+                border-bottom: 1px solid #ccc;
+                position: relative;
+                @include mq() {
+                    width: 80px;
+                    bottom: 41px;
+                }
+            }
+            li.active {
+                .icon {
+                    color: #fff;
+                    background: #D1001B;
+                }
+                .text {
+                    font-weight: bold;
+                    color: #D1001B;
+                }
+            }
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 20px;
+            margin: 0 0 20px 0;
+        }
+        p {
+            text-align: center;
+            font-size: 16px;
+            line-height: 1.7;
+            @include mq() {
+                font-size: 12px;
+            }
+        }
+    }
+
+    // フォーム
+    .form {
+        width: 1000px;
+        margin: 0 auto 136px;
+        @media screen and (min-width:768px) and (max-width:999px) {
+            width: calc(100% - 80px);
+        }
+        @include mq() {
+            width: calc(100% - 40px);
+            margin: 0 auto 120px;
+        }
+        form {
+            .formSet {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin: 0 0 26px 0;
+                padding: 0 0 26px 0;
+                border-bottom: 1px solid #ccc;
+                @media screen and (min-width:768px) and (max-width:999px) {
+                    width: calc(100% - 80px);
+                }
+                @include mq() {
+                    display: block;
+                    margin: 0 0 20px 0;
+                    padding: 0 0 20px 0;
+                }
+                input, textarea, select { appearance: none;}
+                select::-ms-expand {
+                    display: none;
+                }
+                .label {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 16px;
+                    font-weight: bold;
+                    line-height: 1;
+                    width: 270px;
+                    margin: 0;
+                    position: relative;
+                    top: 12px;
+                    @include mq() {
+                        display: block;
+                        font-size: 14px;
+                        margin: 0 0 30px 0;
+                    }
+                    span {
+                        text-align: center;
+                        font-size: 14px;
+                        width: 70px;
+                        height: 30px;
+                        margin: 0;
+                        padding: 8px;
+                        color: #fff;
+                        border-radius: 30px;
+                        background: #E63842;
+                        @include mq() {
+                            font-size: 12px;
+                            font-weight: 500;
+                            margin: 0 0 0 20px;
+                            padding: 4px 10px;
+                        }
+                    }
+                    .any {
+                        background: #2F253F;
+                    }
+                }
+                .no-relative {
+                    top: 0;
+                }
+                .inputWrap {
+                    width: 670px;
+                    @include mq() {
+                        width: 100%;
+                    }
+                    .input,
+                    .textarea,
+                    select {
+                        font-size: 16px;
+                        padding: 16px 32px;
+                        line-height: 1.4;
+                        width: 100%;
+                        border: none;
+                        outline: none;
+                        border-radius: 8px;
+                        background: #F1F2F6;
+                        @include mq() {
+                            font-size: 12px;
+                            padding: 16px;
+                        }
+                    }
+                    .textarea {
+                        height: 120px;
+                        resize: vertical;
+                        @include mq() {
+                            height: 250px;
+                        }
+                    }
+                    .error {
+                        margin: 20px 0 0 0;
+                        display: block;
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: #E63842;
+                        @include mq() {
+                            font-size: 12px;
+                            margin: 10px 0 0 0;
+                        }
+                    }
+                    // ラジオボタン
+                    .radioItemWrap {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 0 32px;
+                        position: relative;
+                        top: 6px;
+                        @include mq() {
+                            flex-direction: column;
+                            gap: 16px 0;
+                            top: 0;
+                        }
+                        .radioItem {
+                            label {
+                                font-size: 16px;
+                                color: #777;
+                                cursor: pointer;
+                                padding: 0 0 0 32px;
+                                position: relative;
+                                @include mq() {
+                                    font-size: 12px;
+                                    padding: 0 0 0 20px;
+                                }
+                            }
+                            label::before,
+                            label::after {
+                                content: "";
+                                display: block;
+                                border-radius: 50%;
+                                position: absolute;
+                                transform: translateY(-50%);
+                                top: 50%;
+                            }  
+                            label::before {
+                                width: 30px;
+                                height: 30px;
+                                background: #F1F2F6;
+                                @include mq() {
+                                    width: 20px;
+                                    height: 20px;
+                                }
+                            }
+                            label::after {
+                                width: 10px;
+                                height: 10px;
+                                left: 5px;
+                                background: #2F253F;
+                                opacity: 0;
+                                @include mq() {
+                                    width: 6px;
+                                    height: 6px;
+                                    left: 2px;
+                                }
+                            }
+                            input:checked + label::after {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    select {
+                        appearance: none;
+                        -moz-appearance: none;
+                        -webkit-appearance: none;
+                        width: 260px;
+                        margin: 0 0 20px 0;
+                        border: none;
+                        position: relative;
+                        background: #F1F2F6 url(../img/contact/select-arrow.svg) no-repeat right 24px center / 8px auto;
+                        @include mq() {
+                            width: 100%;
+                            margin: 0 0 10px 0;
+                        }
+                    }
+                }
+            }
+            .lastFormSet {
+                margin: 0 0 80px 0;
+                padding: 0;
+                border-bottom: none;
+                @include mq() {
+                    margin: 0 0 40px 0;
+                }
+            }
+            button {
+                display: block;
+                font-size: 18px;
+                font-weight: bold;
+                width: 450px;
+                color: #fff;
+                margin: 0 auto 30px;
+                padding: 32px;
+                border: 2px solid #E63842;
+                border-radius: 60px;
+                background: #E63842;
+                transition: .5s;
+                position: relative;
+                @include mq() {
+                    width: 100%;
+                    margin: 0 0 20px 0;
+                    padding: 24px;
+                }
+                span {
+                    position: absolute;
+                    top: 50%;
+                    right: 32px;
+                    transform: translateY(-50%);
+                    svg {
+                        fill: #fff;
+                    }
+                    @include mq() {
+                        right: 24px;
+                    }
+                }
+                &:hover {
+                    color: #E63842;
+                    background: #fff;
+                }
+            }
+        }
+        .privacy {
+            text-align: center;
+            text-decoration: underline;
+            font-size: 12px;
+            cursor: pointer;
+        }
+    }
+}
+
+// 旧スタイル
+// .contact {
+//     margin: 58px auto;
+//     // ナビゲーション
+//     .intro {
+//         width: calc(100% - 40px);
+//         margin: 0 auto 80px;
+//         ul {
+//             display: flex;
+//             justify-content: center;
+//             margin: 0 0 40px 0;
+//             li {
+//                 .icon {
+//                     font-family: 'Poppins', sans-serif;
+//                     color: #BFBFBF;
+//                     margin: 0 0 13px 0;
+//                     padding: 16px;
+//                     border: 1px solid #ccc;
+//                     border-radius: 50%;
+//                     background: #F1F2F6;
+//                 }
+//                 .text {
+//                     text-align: center;
+//                     font-size: 11px;
+//                     color: #2F253F;
+//                 }
+//             }
+//             li.border {
+//                 width: 80px;
+//                 border-bottom: 1px solid #ccc;
+//                 position: relative;
+//                 bottom: 41px;
+//             }
+//             li.active {
+//                 .icon {
+//                     color: #fff;
+//                     background: #D1001B;
+//                 }
+//                 .text {
+//                     font-weight: bold;
+//                     color: #D1001B;
+//                 }
+//             }
+//         }
+//         h2 {
+//             text-align: center;
+//             font-size: 20px;
+//             margin: 0 0 20px 0;
+//         }
+//         p {
+//             text-align: center;
+//             font-size: 12px;
+//             line-height: 1.7;
+//         }
+//     }
+
+//     // フォーム
+//     .form {
+//         width: calc(100% - 40px);
+//         margin: 0 auto 120px;
+//         form {
+//             .formSet {
+//                 margin: 0 0 20px 0;
+//                 padding: 0 0 20px 0;
+//                 border-bottom: 1px solid #ccc;
+//                 input, textarea, select { appearance: none;}
+//                 select::-ms-expand {
+//                     display: none;
+//                 }
+//                 .label {
+//                     font-size: 14px;
+//                     font-weight: bold;
+//                     line-height: 1;
+//                     margin: 0 0 10px 0;
+//                     span {
+//                         font-size: 12px;
+//                         font-weight: 500;
+//                         margin: 0 0 0 20px;
+//                         padding: 4px 10px;
+//                         color: #fff;
+//                         border-radius: 30px;
+//                         background: #E63842;
+//                     }
+//                     .any {
+//                         background: #2F253F;
+//                     }
+//                 }
+//                 .inputWrap {
+//                     .input,
+//                     .textarea,
+//                     select {
+//                         font-size: 12px;
+//                         line-height: 1.4;
+//                         width: 100%;
+//                         padding: 16px;
+//                         border: none;
+//                         outline: none;
+//                         border-radius: 8px;
+//                         background: #F1F2F6;
+//                     }
+//                     .textarea {
+//                         height: 250px;
+//                         resize: vertical;
+//                     }
+//                     .error {
+//                         display: block;
+//                         font-size: 12px;
+//                         font-weight: 400;
+//                         color: #E63842;
+//                         margin: 10px 0 0 0;
+//                     }
+//                     // ラジオボタン
+//                     .radioItemWrap {
+//                         .radioItem {
+//                             margin: 0 0 10px 0;
+//                             label {
+//                                 font-size: 12px;
+//                                 color: #777;
+//                                 cursor: pointer;
+//                                 padding: 0 0 0 20px;
+//                                 position: relative;
+//                             }
+//                             label::before,
+//                             label::after {
+//                                 content: "";
+//                                 display: block;
+//                                 border-radius: 50%;
+//                                 position: absolute;
+//                                 transform: translateY(-50%);
+//                                 top: 50%;
+//                             }  
+//                             label::before {
+//                                 width: 20px;
+//                                 height: 20px;
+//                                 background: #F1F2F6;
+//                             }
+//                             label::after {
+//                                 width: 6px;
+//                                 height: 6px;
+//                                 background: #2F253F;
+//                                 opacity: 0;
+//                                 left: 2px;
+//                             }
+//                             input:checked + label::after {
+//                                 opacity: 1;
+//                             }
+//                         }
+//                     }
+//                     select {
+//                         appearance: none;
+//                         -moz-appearance: none;
+//                         -webkit-appearance: none;
+//                         margin: 0 0 10px 0;
+//                         border: none;
+//                         position: relative;
+//                         background: #F1F2F6 url(../img/contact/select-arrow.svg) no-repeat right 24px center / 8px auto;
+//                     }
+//                 }
+//             }
+//             .lastFormSet {
+//                 margin: 0 0 80px 0;
+//                 padding: 0;
+//                 border-bottom: none;
+//             }
+//             button {
+//                 font-size: 18px;
+//                 font-weight: bold;
+//                 width: 100%;
+//                 color: #fff;
+//                 margin: 0 0 20px 0;
+//                 padding: 24px;
+//                 border: 2px solid #E63842;
+//                 border-radius: 60px;
+//                 background: #E63842;
+//                 transition: .5s;
+//                 position: relative;
+//                 span {
+//                     position: absolute;
+//                     top: 50%;
+//                     right: 24px;
+//                     transform: translateY(-50%);
+//                     svg {
+//                         fill: #fff;
+//                     }
+//                 }
+//                 &:hover {
+//                     color: #E63842;
+//                     background: #fff;
+//                 }
+//             }
+//         }
+//         .privacy {
+//             text-align: center;
+//             text-decoration: underline;
+//             font-size: 12px;
+//             cursor: pointer;
+//         }
+//     }
+
+//     @media screen and (min-width:768px) {
+//         .form {
+//             width: calc(100% - 80px);
+//         }
+//     }
+
+//     @media screen and (min-width:1024px) {
+//         margin: 90px auto;
+//         .intro {
+//             margin: 0 auto 100px;
+//             ul {
+//                 display: flex;
+//                 justify-content: center;
+//                 margin: 0 0 100px 0;
+//                 li {
+//                     .icon {
+//                         padding: 20px;
+//                     }
+//                     .text {
+//                         font-size: 12px;
+//                     }
+//                 }
+//                 li.border {
+//                     width: 110px;
+//                     bottom: 48px;
+//                 }
+//             }
+//             p {
+//                 font-size: 16px;
+//             }
+//         }
+
+//         // フォーム
+//         .form {
+//             width: 1000px;
+//             margin: 0 auto 136px;
+//             form {
+//                 .formSet {
+//                     display: flex;
+//                     justify-content: space-between;
+//                     align-items: flex-start;
+//                     margin: 0 0 26px 0;
+//                     padding: 0 0 26px 0;
+//                     .label {
+//                         display: flex;
+//                         justify-content: space-between;
+//                         align-items: center;
+//                         font-size: 16px;
+//                         width: 270px;
+//                         margin: 0;
+//                         position: relative;
+//                         top: 12px;
+//                         span {
+//                             text-align: center;
+//                             font-size: 14px;
+//                             width: 70px;
+//                             height: 30px;
+//                             margin: 0;
+//                             padding: 8px;
+//                         }
+//                     }
+//                     .no-relative {
+//                         top: 0;
+//                     }
+//                     .inputWrap {
+//                         width: 670px;
+//                         .input,
+//                         .textarea,
+//                         select {
+//                             font-size: 16px;
+//                             padding: 16px 32px;
+//                         }
+//                         .textarea {
+//                             height: 120px;
+//                         }
+//                         .error {
+//                             margin: 20px 0 0 0;
+//                         }
+//                         .selectError {
+//                             margin: 30px 0 0 0;
+//                         }
+//                         // ラジオボタン
+//                         .radioItemWrap {
+//                             display: flex;
+//                             flex-wrap: wrap;
+//                             position: relative;
+//                             top: 6px;
+//                             .radioItem {
+//                                 margin: 0 32px 0 0;
+//                                 label {
+//                                     font-size: 16px;
+//                                     padding: 0 0 0 32px;
+//                                 }
+//                                 label::before {
+//                                     width: 30px;
+//                                     height: 30px;
+//                                 }
+//                                 label::after {
+//                                     width: 10px;
+//                                     height: 10px;
+//                                     left: 5px;
+//                                 }
+//                             }
+//                         }
+//                         select {
+//                             width: 260px;
+//                             margin: 0 0 20px 0;
+//                         }
+//                     }
+//                 }
+//                 .lastFormSet {
+//                     margin: 0 0 120px 0;
+//                 }
+//                 button {
+//                     display: block;
+//                     font-size: 18px;
+//                     width: 450px;
+//                     color: #fff;
+//                     margin: 0 auto 30px;
+//                     padding: 32px;
+//                     span {
+//                         right: 32px;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

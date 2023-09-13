@@ -1,0 +1,8 @@
+@use "../utils/utils" as *;
+
+.post {
+    margin: 90px auto;
+    @include mq() {
+        margin: 58px auto;
+    }
+}

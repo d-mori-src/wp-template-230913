@@ -1,0 +1,124 @@
+@use "../utils/utils" as *;
+
+// このファイルのみ、スマホのみなのでモバイルファースト（ここだけ特例）
+#sidebarMenu {
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    position: fixed;
+    top: 58px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    transform: translateX(768px);
+    transition: transform 250ms ease-in-out;
+    background: $white-color;
+    z-index: 1000;
+    padding: 32px;
+    ul {
+        li {
+            display: flex;
+            margin: 0 0 48px 0;
+            .icon {
+                display: block;
+                width: 12px;
+                margin: 0 32px 0 0;
+            }
+            a {
+                font-size: 16px;
+                font-family: 'Josefin Sans', sans-serif;
+                position: relative;
+                top: 2px;
+            }
+        }
+    }
+}
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+.openSidebarMenu {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: fixed;
+    z-index: 1001;
+    height: 100%;
+    width: 100%;
+    top: 20px;
+    right: 20px;
+    height: 24px;
+    width: 24px;
+    &::before {
+        content: "";
+        background: $white-color;
+        width: 64px;
+        height: 58px;
+        display: block;
+        position: absolute;
+        top: -20px;
+        left: -20px;
+    }
+}
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: $base-color;
+}
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 5px;
+}
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: right;
+    margin-top: 5px;
+    // width: 18px; // 幅調整
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+    width: 100%;
+}
+
+// PC時は表示しない
+@include mq(pc) {
+    #sidebarMenu,
+    .spinner,
+    .sidebarIconToggle {
+        display: none;
+    }
+}

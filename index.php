@@ -9,5 +9,4 @@
     <p class="bottomSlidein">トップページが入ります。</p>
 </main>
 
-<?php get_template_part('components/parts/drawer/drawer'); ?>
 <?php get_footer(); ?>

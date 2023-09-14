@@ -16,5 +16,4 @@
     <a href="<?=$site_url;?>/post">一覧へ戻る</a>
 </main>
 
-<?php get_template_part('components/parts/drawer/drawer'); ?>
 <?php get_footer(); ?>

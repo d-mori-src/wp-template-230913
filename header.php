@@ -53,10 +53,6 @@
         <meta property="og:description" content="This is contact page" />
     <?php endif;?>
 
-    <!-- スタイルシート -->
-    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>?<?php echo date('YmdHis'); ?>">
-    <!-- <link rel="stylesheet" href="<?php // echo $uri ?>/style.min.css?<?php // echo date('YmdHis'); ?>"> -->
-
     <!-- safari用フォント -->
     <?php $user_agent = $_SERVER['HTTP_USER_AGENT']; ?>
     <?php if (strpos($user_agent, 'Safari') !== false && strpos($user_agent, 'Chrome') === false): ?>
@@ -66,10 +62,35 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <?php endif; ?>
+
+    <!-- スタイルシート -->
+    <!-- style -->
+    <?php if (!is_production_environment()): ?>
+        <!-- 開発・テストサーバー時はstyle.css -->
+        <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>?<?php echo date('YmdHis'); ?>">
+    <?php else:?>
+        <!-- 本番公開時はstyle.min.css -->
+        <link rel="stylesheet" href="<?php echo $uri ?>/style.min.css?<?php echo date('YmdHis'); ?>">
+    <?php endif;?>
+
+    <?php if (!is_production_environment()): ?>
+        <!-- 開発・テストサーバー時のみ -->
+        <meta name="robots" content="noindex,nofollow" />
+    <?php endif;?>
+
+    <?php  if (is_production_environment()): ?>
+        <!-- 本番公開時はアナリティクスタグ埋め込み -->
+        <!-- Google tag (gtag.js) -->
+    <?php endif;?>
     
     <?php wp_head(); ?>
 </head>
     <body>
+        <?php if (is_production_environment()): ?>
+            <!-- 本番公開時はタグマネージャー埋め込み -->
+            <!-- Google Tag Manager (noscript) -->      
+        <?php endif;?>
+
         <div class="container">
             <!-- 使いたいヘッダーパターンを適宜読み込み -->
             <?php get_template_part('components/Layout/header/header01'); ?>

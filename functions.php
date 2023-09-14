@@ -36,6 +36,11 @@ function post_has_archive( $args, $post_type ) {
 }
 add_filter( 'register_post_type_args', 'post_has_archive', 10, 2 );
 
+// 本番環境を整合させるための関数
+function is_production_environment() {
+	return strpos(get_site_url(), 'https//www.example.co.jp') !== false; // 本番環境のURLを指定
+}
+
 // プラグイン「CPTUI」で作成する場合は不要
 // カスタム投稿タイプの追加
 // add_action( 'init', 'create_post_type' );

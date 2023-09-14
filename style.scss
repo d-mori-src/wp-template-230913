@@ -10,13 +10,13 @@
 
 // レイアウト
 // ヘッダー
-@use "sass/layout/header/header01";
+@use "sass/layout/header/header";
 // フッター
-@use "sass/layout/footer/footer01";
+@use "sass/layout/footer/footer";
 
 // 各種パーツ
 @use "sass/parts/bottomSlidein";
-@use "sass/parts/drawer";
+@use "sass/parts/drawer/drawer";
 
 // 各種Mainページ
 @use "sass/page/top";

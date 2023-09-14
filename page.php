@@ -1,8 +1,20 @@
 <?php
+    /*
+        *** 例
+        *** 固定ページがcontactの場合
+        *** pages/contact/index.php
+
+        *** 固定ページがcontactを親にしてconfirmの場合
+        *** pages/contact/confirm.php
+        
+        *** 固定ページがcontactを親にしてthanksの場合
+        *** pages/contact/thanks.php
+    */
+
     // テンプレートがあるかをチェック
     $url = $_SERVER['REQUEST_URI'];
     $url = explode('?', $url);
-    $url = $url[0];
+    $url = '/pages'.$url[0];
 
     $path = get_template_directory() . substr($url, 0, strlen($url) - 1) . '.php';
     if (file_exists($path)) {

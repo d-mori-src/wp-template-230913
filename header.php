@@ -46,7 +46,11 @@
         <meta name="description" content="<?php echo esc_attr($content); ?>">
         <meta property="og:description" content="<?php echo esc_attr($content); ?>" />
     <?php endif; ?>
-    <?php if ($server_uri === '/contact/'): ?>
+    <?php if (
+        $server_uri === '/contact/' || 
+        $server_uri === '/contact/confirm/' || 
+        $server_uri === '/contact/thanks/'): 
+    ?>
         <title>Contact</title>
         <meta property="og:title" content="Contact">
         <meta name="description" content="This is contact page">

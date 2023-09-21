@@ -1,5 +1,4 @@
 # WordPressテンプレート
-version： 1.0.0<br>
 time: 2023.9.13
 
 ## ファイル構成

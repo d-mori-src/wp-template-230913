@@ -1,5 +1,4 @@
-
-$(function(){
+$(function() {
     // ふわっと要素を出力
     showElementAnimation();
     $(window).on('scroll', showElementAnimation);

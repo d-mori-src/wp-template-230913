@@ -29,7 +29,7 @@ root
         |- parts
 ```
 
-## header.php
+### header.php
 - 主にhead内metaデータ
 - ヘッダーは部品ファイルとして管理する。`components/Layout/header/〜`に集約（今後いろんなパターンを作って切り替え可能にする予定）
 
@@ -38,7 +38,7 @@ root
 <?php get_template_part('components/Layout/header/header01'); ?>
 ```
 
-## footer.php
+### footer.php
 - 主にjs読み込み
 - フッターは部品ファイルとして管理する。`components/Layout/footer/〜`に集約（今後いろんなパターンを作って切り替え可能にする予定）
 
@@ -47,7 +47,7 @@ root
 <?php get_template_part('components/Layout/footer/footer01'); ?>
 ```
 
-# components
+### components
 - 主に共通部品を作成し、格納しておくフォルダ
 - `Layout`にはheaderとfooterやあとサイドバーなど入れる
 - その他パーツは`parts`に入れる
@@ -57,7 +57,7 @@ root
 <?php get_template_part('components/parts/drawer/drawer01'); ?>
 ```
 
-# page.php
+### page.php
 - 固定ページの動的ファイル化
 
 ```
@@ -72,7 +72,7 @@ root
     * pages/contact/thanks.php
 ```
 
-# スタイリング
+### スタイリング
 ```
 root
     |- style.scss

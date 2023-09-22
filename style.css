@@ -879,15 +879,6 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
         display: none;
     }
 }
-.top {
-    margin: 90px auto;
-}
-@media screen and (max-width: 767px) {
-    .top {
-        margin: 58px auto;
-    }
-}
-
 .post {
     margin: 90px auto;
 }

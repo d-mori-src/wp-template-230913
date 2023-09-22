@@ -33,13 +33,7 @@
 
     <!-- スタイルシート -->
     <!-- style -->
-    <?php if (!is_production_environment()): ?>
-        <!-- 開発・テストサーバー時はstyle.css -->
-        <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>?<?php echo date('YmdHis'); ?>">
-    <?php else:?>
-        <!-- 本番公開時はstyle.min.css -->
-        <link rel="stylesheet" href="<?php echo $uri ?>/style.min.css?<?php echo date('YmdHis'); ?>">
-    <?php endif;?>
+    <link rel="stylesheet" href="<?php echo $uri ?>/style.min.css?<?php echo date('YmdHis'); ?>">
 
     <!-- 各ページ切り分け -->
     <?php if ($server_uri === '/'): ?>
@@ -47,6 +41,7 @@
         <meta property="og:title" content="Top">
         <meta name="description" content="This is top page">
         <meta property="og:description" content="This is top page" />
+        <link rel="stylesheet" href="<?php echo $uri ?>/css/top.min.css?<?php echo date('YmdHis'); ?>">
     <?php endif;?>
     <?php if ($server_uri === '/post/'): ?>
         <title>Post</title>

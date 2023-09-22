@@ -19,6 +19,6 @@
 @use "sass/parts/drawer/drawer";
 
 // 各種Mainページ
-@use "sass/page/top";
+// @use "sass/page/top"; // cssディレクトリに移動
 @use "sass/page/post";
 @use "sass/page/contact";

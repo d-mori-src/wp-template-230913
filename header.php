@@ -21,6 +21,26 @@
     <link rel="apple-touch-icon" href="<?= $uri ?>/meta/icon.png">
     <link rel="shortcut icon" href="<?= $uri ?>/meta/favicon.ico">
 
+    <!-- safari用フォント -->
+    <?php $user_agent = $_SERVER['HTTP_USER_AGENT']; ?>
+    <?php if (strpos($user_agent, 'Safari') !== false && strpos($user_agent, 'Chrome') === false): ?>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <?php endif; ?>
+
+    <!-- スタイルシート -->
+    <!-- style -->
+    <?php if (!is_production_environment()): ?>
+        <!-- 開発・テストサーバー時はstyle.css -->
+        <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>?<?php echo date('YmdHis'); ?>">
+    <?php else:?>
+        <!-- 本番公開時はstyle.min.css -->
+        <link rel="stylesheet" href="<?php echo $uri ?>/style.min.css?<?php echo date('YmdHis'); ?>">
+    <?php endif;?>
+
     <!-- 各ページ切り分け -->
     <?php if ($server_uri === '/'): ?>
         <title>Top</title>
@@ -55,26 +75,6 @@
         <meta property="og:title" content="Contact">
         <meta name="description" content="This is contact page">
         <meta property="og:description" content="This is contact page" />
-    <?php endif;?>
-
-    <!-- safari用フォント -->
-    <?php $user_agent = $_SERVER['HTTP_USER_AGENT']; ?>
-    <?php if (strpos($user_agent, 'Safari') !== false && strpos($user_agent, 'Chrome') === false): ?>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <?php endif; ?>
-
-    <!-- スタイルシート -->
-    <!-- style -->
-    <?php if (!is_production_environment()): ?>
-        <!-- 開発・テストサーバー時はstyle.css -->
-        <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>?<?php echo date('YmdHis'); ?>">
-    <?php else:?>
-        <!-- 本番公開時はstyle.min.css -->
-        <link rel="stylesheet" href="<?php echo $uri ?>/style.min.css?<?php echo date('YmdHis'); ?>">
     <?php endif;?>
 
     <?php if (!is_production_environment()): ?>

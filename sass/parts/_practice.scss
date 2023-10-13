@@ -1,0 +1,98 @@
+@use "../utils/utils" as *;
+
+/*
+    // 練習用
+*/
+
+/*
+    // @mixin
+*/
+@mixin relatedArea {
+    font-size: 16px;
+    color: #333;
+    width: calc(100% - 80px);
+    max-width: 1000px;
+    background: #eee;
+}
+.box {
+    @include relatedArea;
+}
+
+/*
+    // 引数を使ったmixin
+*/
+@mixin rCorner($value: 16px) {
+    border-radius: $value;
+}
+@mixin boxBase($margin: 0 auto 20px, $padding: 32px) {
+    margin: $margin;
+    padding: $padding;
+}
+.boxA {
+    @include rCorner;
+    @include boxBase;
+}
+.boxB {
+    @include rCorner(8px);
+    @include boxBase(0 auto 20px, 64px);
+}
+
+/*
+    // カンマ（,）を使うプロパティには可変長引数を利用する
+*/
+// @mixin shadow($value) {
+//     text-shadow: $value;
+// }
+// h2 {
+// 	@include shadow(unquote("0 0 0 red, 0 0 5px red, 0 0 10px red"));
+// }
+@mixin shadow($value...) {
+	text-shadow: $value;
+}
+h2 {
+	@include shadow(0 0 0 red, 0 0 5px red, 0 0 10px red);
+}
+
+
+/*
+    // @if
+*/
+@mixin conditionBox($value) {
+    $getStyle: $value;
+    @if $getStyle == 1 {
+        margin: 0 auto 30px;
+        padding: 24px;
+        background: #ccc;
+    } @else if $getStyle == 2 {
+        color: #fff;
+        margin: 0 auto 20px;
+        padding: 12px;
+        background: #000;
+    } @else {
+        color: #fff;
+        margin: 0 auto 20px;
+        padding: 12px;
+        background: #666;
+    }
+}
+.conditionBoxA {
+    @include conditionBox(1);
+}
+.conditionBoxB {
+    @include conditionBox(2);
+}
+
+/*
+    // @each
+*/
+$buttonStyles: (
+    "Primary": #3498db,
+    "Success": #2ecc71,
+    "Danger": #e74c3c
+);
+@each $name, $color in $buttonStyles {
+    .btn#{$name} {
+        background: $color;
+        color: #fff;
+    }
+}

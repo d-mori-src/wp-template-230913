@@ -739,6 +739,76 @@ ul li {
     }
 }
 
+/*
+    // 練習用
+*/
+/*
+    // @mixin
+*/
+.box {
+    font-size: 16px;
+    color: #333;
+    width: calc(100% - 80px);
+    max-width: 1000px;
+    background: #eee;
+}
+
+/*
+    // 引数を使ったmixin
+*/
+.boxA {
+    border-radius: 16px;
+    margin: 0 auto 20px;
+    padding: 32px;
+}
+
+.boxB {
+    border-radius: 8px;
+    margin: 0 auto 20px;
+    padding: 64px;
+}
+
+/*
+    // カンマ（,）を使うプロパティには可変長引数を利用する
+*/
+h2 {
+    text-shadow: 0 0 0 red, 0 0 5px red, 0 0 10px red;
+}
+
+/*
+    // @if
+*/
+.conditionBoxA {
+    margin: 0 auto 30px;
+    padding: 24px;
+    background: #ccc;
+}
+
+.conditionBoxB {
+    color: #fff;
+    margin: 0 auto 20px;
+    padding: 12px;
+    background: #000;
+}
+
+/*
+    // @each
+*/
+.btnPrimary {
+    background: #3498db;
+    color: #fff;
+}
+
+.btnSuccess {
+    background: #2ecc71;
+    color: #fff;
+}
+
+.btnDanger {
+    background: #e74c3c;
+    color: #fff;
+}
+
 .bottomSlidein {
     opacity: 0;
     visibility: hidden;

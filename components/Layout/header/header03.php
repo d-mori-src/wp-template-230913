@@ -6,15 +6,20 @@
     $server_uri = $_SERVER['REQUEST_URI'];
     $server_uri_trimed = substr($server_uri, 0, strcspn($server_uri,'?')); 
 ?>
-<header class="header01">
+<header class="header03">
     <div class="innerHeader">
-        <a href="<?=$site_url;?>" class="logo">
-            <img src="<?=$uri?>/img/common/logo.svg" alt="logo">
-        </a>
-        <ul>
+        <div class="left">
+            <a href="<?=$site_url;?>">
+                <img src="<?=$uri?>/img/common/logo.svg" class="logo" alt="">
+            </a>
+        </div>
+        <ul class="center">
             <li><a href="<?=$site_url;?>" class="<?=$active = ($server_uri === '/') ? 'active' : ''; ?>">HOME</a></li>
             <li><a href="<?=$site_url;?>/post" class="<?=$active = ($server_uri === '/post/') ? 'active' : ''; ?>">POST</a></li>
             <li><a href="<?=$site_url;?>/contact" class="<?=$active = ($slug === 'contact') ? 'active' : ''; ?>">CONTACT</a></li>
         </ul>
+        <div class="right">
+            <a href="" class="dashIcon"><img src="<?=$uri?>/img/header/header03/dash_icon.svg" alt=""></a>
+        </div>
     </div>
 </header>

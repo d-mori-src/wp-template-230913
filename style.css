@@ -79,8 +79,7 @@ a {
 abbr[title] {
     border-bottom: none; /* 1 */
     text-decoration: underline; /* 2 */
-    -webkit-text-decoration: underline dotted;
-            text-decoration: underline dotted; /* 2 */
+    text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -180,9 +179,7 @@ button,
 [type=button],
 [type=reset],
 [type=submit] {
-    -webkit-appearance: button;
-       -moz-appearance: button;
-            appearance: button;
+    appearance: button;
 }
 
 /**
@@ -265,9 +262,7 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-    -webkit-appearance: textfield;
-       -moz-appearance: textfield;
-            appearance: textfield; /* 1 */
+    appearance: textfield; /* 1 */
     outline-offset: -2px; /* 2 */
 }
 
@@ -515,13 +510,11 @@ ul li {
     }
 }
 .header01 .innerHeader .logo {
-    height: 40px;
+    display: block;
+    height: 30px;
 }
-@media screen and (max-width: 767px) {
-    .header01 .innerHeader .logo {
-        width: auto;
-        height: 30px;
-    }
+.header01 .innerHeader .logo img {
+    height: 100%;
 }
 .header01 .innerHeader ul {
     display: flex;
@@ -545,6 +538,142 @@ ul li {
     color: #75CC00;
     padding: 0 0 8px 0;
     border-bottom: 1px solid #75CC00;
+}
+
+.header02 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.header02 .innerHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    background: #fff;
+}
+.header02 .innerHeader .left {
+    display: flex;
+    align-items: center;
+    gap: 0 40px;
+}
+.header02 .innerHeader .left .logo {
+    height: 40px;
+}
+.header02 .innerHeader .left ul {
+    display: flex;
+    align-items: center;
+    gap: 0 24px;
+}
+.header02 .innerHeader .left ul li a {
+    font-size: 14px;
+    font-family: "Josefin Sans", sans-serif;
+    color: #197CC0;
+}
+.header02 .innerHeader .left ul li .active {
+    padding: 0 0 28px 0;
+    border-bottom: 3px solid #197CC0;
+}
+.header02 .innerHeader .right {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+}
+.header02 .innerHeader .right .link {
+    display: flex;
+    align-items: center;
+    gap: 0px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #197CC0;
+}
+.header02 .innerHeader .right .link span img {
+    width: auto;
+    height: 18px;
+}
+.header02 .innerHeader .right .btn {
+    font-size: 12px;
+    font-weight: bold;
+    color: #197CC0;
+    padding: 12px 36px 12px 24px;
+    border: 1px solid #197CC0;
+    border-radius: 60px;
+    position: relative;
+    transition: 1s;
+}
+.header02 .innerHeader .right .btn:hover {
+    color: #fff;
+    background: #197CC0;
+}
+.header02 .innerHeader .right .btn span {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+}
+.header02 .innerHeader .right .btn span img {
+    width: 13px;
+    height: 13px;
+}
+.header02 .innerHeader .right .gradation {
+    color: #fff;
+    border: 1px solid #59C8CA;
+    background: linear-gradient(#59C8CA, #197CC0);
+}
+.header02 .innerHeader .right .gradation:hover {
+    color: #197CC0;
+    border: 1px solid #197CC0;
+    background: #fff;
+}
+
+.header03 {
+    position: fixed;
+    top: 24px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.header03 .innerHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 100px);
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 16px 40px;
+    border-radius: 60px;
+    background: #fff;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
+}
+.header03 .innerHeader .left .logo {
+    height: 40px;
+}
+.header03 .innerHeader .center {
+    display: flex;
+    gap: 0 40px;
+    justify-content: flex-start;
+    width: 75%;
+    margin: 0 auto;
+}
+.header03 .innerHeader .center li a {
+    font-size: 12px;
+    font-family: "Josefin Sans", sans-serif;
+    color: #197CC0;
+}
+.header03 .innerHeader .center li .active {
+    padding: 0 0 25px 0;
+    border-bottom: 3px solid #197CC0;
+}
+.header03 .innerHeader .right .dashIcon {
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+.header03 .innerHeader .right .dashIcon img {
+    width: 100%;
+    height: 100%;
 }
 
 .footer01 {
@@ -739,74 +868,79 @@ ul li {
     }
 }
 
-/*
-    // 練習用
-*/
-/*
-    // @mixin
-*/
-.box {
-    font-size: 16px;
-    color: #333;
+.footer02 {
+    color: #fff;
+    background: #41AAE1;
+}
+.footer02 .innerFooter {
     width: calc(100% - 80px);
-    max-width: 1000px;
-    background: #eee;
+    margin: 0 auto;
+    padding: 60px 0;
 }
-
-/*
-    // 引数を使ったmixin
-*/
-.boxA {
-    border-radius: 16px;
-    margin: 0 auto 20px;
-    padding: 32px;
+@media screen and (min-width: 1366px) {
+    .footer02 .innerFooter {
+        width: 1200px;
+    }
 }
-
-.boxB {
-    border-radius: 8px;
-    margin: 0 auto 20px;
-    padding: 64px;
+.footer02 .innerFooter .footerNavi {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 90px 0;
 }
-
-/*
-    // カンマ（,）を使うプロパティには可変長引数を利用する
-*/
-h2 {
-    text-shadow: 0 0 0 red, 0 0 5px red, 0 0 10px red;
+.footer02 .innerFooter .footerNavi .row {
+    width: 16%;
 }
-
-/*
-    // @if
-*/
-.conditionBoxA {
-    margin: 0 auto 30px;
-    padding: 24px;
-    background: #ccc;
+.footer02 .innerFooter .footerNavi .row ul {
+    margin: 0 0 48px 0;
 }
-
-.conditionBoxB {
-    color: #fff;
-    margin: 0 auto 20px;
-    padding: 12px;
-    background: #000;
+.footer02 .innerFooter .footerNavi .row ul li {
+    margin: 0 0 16px 0;
 }
-
-/*
-    // @each
-*/
-.btnPrimary {
-    background: #3498db;
+.footer02 .innerFooter .footerNavi .row ul li:last-child {
+    margin: 0;
+}
+.footer02 .innerFooter .footerNavi .row ul li a {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
     color: #fff;
 }
-
-.btnSuccess {
-    background: #2ecc71;
+.footer02 .innerFooter .footerNavi .row ul li .title {
+    font-size: 16px;
+    font-weight: bold;
+}
+.footer02 .innerFooter .footerNavi .row ul li .blue {
+    color: #61D8FA;
+    pointer-events: none;
+}
+.footer02 .innerFooter .footerNavi .row .lastList {
+    margin: 0;
+}
+.footer02 .innerFooter .footerBottom .subNavi {
+    display: flex;
+    gap: 0 24px;
+    margin: 0 0 32px 0;
+}
+.footer02 .innerFooter .footerBottom .subNavi li a {
+    display: flex;
+    gap: 0 10px;
+    font-size: 12px;
     color: #fff;
 }
-
-.btnDanger {
-    background: #e74c3c;
-    color: #fff;
+.footer02 .innerFooter .footerBottom .ci {
+    display: flex;
+    align-items: center;
+    gap: 0 40px;
+}
+.footer02 .innerFooter .footerBottom .ci .logo {
+    display: block;
+    height: 48px;
+}
+.footer02 .innerFooter .footerBottom .ci .logo img {
+    height: 100%;
+}
+.footer02 .innerFooter .footerBottom .ci .copyright {
+    font-size: 12px;
 }
 
 .bottomSlidein {
@@ -1080,9 +1214,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     }
 }
 .contact .form form .formSet input, .contact .form form .formSet textarea, .contact .form form .formSet select {
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
+    appearance: none;
 }
 .contact .form form .formSet select::-ms-expand {
     display: none;

@@ -1,0 +1,93 @@
+@use "../../utils/utils" as *;
+
+.header02 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    .innerHeader {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 30px;
+        background: #fff;
+        .left {
+            display: flex;
+            align-items: center;
+            gap: 0 40px;
+            .logo {
+                height: 40px;
+            }
+            ul {
+                display: flex;
+                align-items: center;
+                gap: 0 24px;
+                li {
+                    a {
+                        font-size: 14px;
+                        font-family: 'Josefin Sans', sans-serif;
+                        color: #197CC0;
+                    }
+                    .active {
+                        padding: 0 0 28px 0;
+                        border-bottom: 3px solid #197CC0;
+                    }
+                }
+            }
+        }
+        .right {
+            display: flex;
+            align-items: center;
+            gap: 0 20px;
+            .link {
+                display: flex;
+                align-items: center;
+                gap: 0px 10px;
+                font-size: 14px;
+                font-weight: bold;
+                color: #197CC0;
+                span {
+                    img {
+                        width: auto;
+                        height: 18px;
+                    }
+                }
+            }
+            .btn {
+                font-size: 12px;
+                font-weight: bold;
+                color: #197CC0;
+                padding: 12px 36px 12px 24px;
+                border: 1px solid #197CC0;
+                border-radius: 60px;
+                position: relative;
+                transition: 1s;
+                &:hover {
+                    color: #fff;
+                    background: #197CC0;
+                }
+                span {
+                    position: absolute;
+                    top: 50%;
+                    right: 14px;
+                    transform: translateY(-50%);
+                    img {
+                        width: 13px;
+                        height: 13px;
+                    }
+                }
+            }
+            .gradation {
+                color: #fff;
+                border: 1px solid #59C8CA;
+                background: linear-gradient(#59C8CA, #197CC0);
+                &:hover {
+                    color: #197CC0;
+                    border: 1px solid #197CC0;
+                    background: #fff;
+                }
+            }
+        }
+    }
+}

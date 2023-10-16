@@ -92,5 +92,5 @@
 
         <div class="container">
             <!-- 使いたいヘッダーパターンを適宜読み込み -->
-            <?php get_template_part('components/Layout/header/header01'); ?>
+            <?php get_template_part('components/Layout/header/header03'); ?>
             <?php get_template_part('components/parts/drawer/drawer01'); ?>

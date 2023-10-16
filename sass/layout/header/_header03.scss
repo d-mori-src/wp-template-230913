@@ -1,0 +1,57 @@
+@use "../../utils/utils" as *;
+
+.header03 {
+    position: fixed;
+    top: 24px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    .innerHeader {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: calc(100% - 100px);
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 16px 40px;
+        border-radius: 60px;
+        background: #fff;
+        filter: drop-shadow(0 0 5px rgba(0,0,0,0.1));
+        .left {
+            .logo {
+                height: 40px;
+            }
+        }
+        .center {
+            display: flex;
+            gap: 0 40px;
+            justify-content: flex-start; // 左
+            // justify-content: center; // センター
+            // justify-content: flex-end; // 右
+            width: 75%;
+            margin: 0 auto;
+            li {
+                a {
+                    font-size: 12px;
+                    font-family: 'Josefin Sans', sans-serif;
+                    color: #197CC0;
+                }
+                .active {
+                    padding: 0 0 25px 0;
+                    border-bottom: 3px solid #197CC0;
+                }
+            }
+        }
+        .right {
+            .dashIcon {
+                display: block;
+                width: 40px;
+                height: 40px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

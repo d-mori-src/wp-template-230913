@@ -943,6 +943,88 @@ ul li {
     font-size: 12px;
 }
 
+.footer03 {
+    color: #333;
+}
+.footer03 .innerFooter {
+    width: calc(100% - 80px);
+    margin: 0 auto;
+    padding: 60px 0;
+}
+@media screen and (min-width: 1366px) {
+    .footer03 .innerFooter {
+        width: 1200px;
+    }
+}
+.footer03 .innerFooter .footerTop {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 160px 0;
+}
+.footer03 .innerFooter .footerTop .left .logo {
+    display: block;
+    height: 48px;
+}
+.footer03 .innerFooter .footerTop .left .logo img {
+    height: 100%;
+}
+.footer03 .innerFooter .footerTop .right {
+    display: flex;
+    gap: 0 40px;
+}
+.footer03 .innerFooter .footerTop .right .row {
+    display: flex;
+    flex-direction: column;
+    gap: 30px 0;
+    width: 200px;
+    padding: 0 40px 0 0;
+    border-right: 1px solid #ccc;
+}
+.footer03 .innerFooter .footerTop .right .row ul li {
+    margin: 0 0 10px 0;
+}
+.footer03 .innerFooter .footerTop .right .row ul li:first-child a {
+    font-size: 16px;
+    font-weight: bold;
+}
+.footer03 .innerFooter .footerTop .right .row ul li:first-child a span {
+    display: block;
+    font-size: 11px;
+    color: #197CC0;
+    margin: 10px 0 0 0;
+}
+.footer03 .innerFooter .footerTop .right .row ul li:last-child {
+    margin: 0;
+}
+.footer03 .innerFooter .footerTop .right .row ul li a {
+    font-size: 14px;
+    font-weight: bold;
+}
+.footer03 .innerFooter .footerTop .right .lastRow {
+    padding: 0;
+    border-right: none;
+}
+.footer03 .innerFooter .footerBottom {
+    display: flex;
+    justify-content: space-between;
+}
+.footer03 .innerFooter .footerBottom .subNavi {
+    display: flex;
+    gap: 0 40px;
+}
+.footer03 .innerFooter .footerBottom .subNavi li a {
+    font-size: 14px;
+}
+.footer03 .innerFooter .footerBottom .subNavi li a img {
+    display: inline-block;
+    width: 18px;
+    height: auto;
+    margin: 0 0 0 10px;
+}
+.footer03 .innerFooter .footerBottom .ci .copyright {
+    font-size: 14px;
+}
+
 .bottomSlidein {
     opacity: 0;
     visibility: hidden;

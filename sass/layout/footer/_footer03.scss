@@ -1,0 +1,92 @@
+@use "../../utils/utils" as *;
+
+.footer03 {
+    color: $base-color;
+    .innerFooter {
+        width: calc(100% - 80px);
+        margin: 0 auto;
+        padding: 60px 0;
+        @media screen and (min-width:1366px) {
+            width: 1200px;
+        }
+        .footerTop {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 0 160px 0;
+            .left {
+                .logo {
+                    display: block;
+                    height: 48px;
+                    img {
+                        height: 100%;
+                    }
+                }
+            }
+            .right {
+                display: flex;
+                gap: 0 40px;
+                .row {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px 0;
+                    width: 200px;
+                    padding: 0 40px 0 0;
+                    border-right: 1px solid #ccc;
+                    ul {
+                        li {
+                            margin: 0 0 10px 0;
+                            &:first-child {
+                                a {
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                    span {
+                                        display: block;
+                                        font-size: 11px;
+                                        color: #197CC0;
+                                        margin: 10px 0 0 0;
+                                    }
+                                }
+                            }
+                            &:last-child {
+                                margin: 0;
+                            }
+                            a {
+                                font-size: 14px;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+                .lastRow {
+                    padding: 0;
+                    border-right: none;
+                }
+            }
+        }
+
+        .footerBottom {
+            display: flex;
+            justify-content: space-between;
+            .subNavi {
+                display: flex;
+                gap: 0 40px;
+                li {
+                    a {
+                        font-size: 14px;
+                        img {
+                            display: inline-block;
+                            width: 18px;
+                            height: auto;
+                            margin: 0 0 0 10px;
+                        }
+                    }
+                }
+            }
+            .ci {
+                .copyright {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

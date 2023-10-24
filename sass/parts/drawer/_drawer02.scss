@@ -1,12 +1,12 @@
 @use "../../utils/utils" as *;
 
 // このファイルのみ、スマホのみなのでモバイルファースト（ここだけ特例）
-#sidebarMenu01 {
+#sidebarMenu02 {
     height: 100%;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     position: fixed;
-    top: 58px;
+    top: 0;
     right: 0;
     bottom: 0;
     left: 0;
@@ -14,28 +14,37 @@
     margin: 0;
     transform: translateX(768px);
     transition: transform 250ms ease-in-out;
-    background: $white-color;
+    background: #000;
     z-index: 1000;
-    padding: 32px;
-    ul {
-        li {
-            display: flex;
-            margin: 0 0 48px 0;
-            .icon {
-                display: block;
-                width: 12px;
-                margin: 0 32px 0 0;
-            }
+    padding: 88px 20px;
+    .majorHeading {
+        .majorHeadingItem {
+            margin: 0 0 24px 0;
+            padding: 0 0 24px 0;
+            border-bottom: 1px solid #666;
             a {
-                font-size: 16px;
+                display: flex;
+                justify-content: space-between;
+                font-size: 20px;
                 font-family: 'Josefin Sans', sans-serif;
+                color: $white-color;
                 position: relative;
                 top: 2px;
+            }
+            .subHeading {
+                margin: 40px 0 0 0;
+                padding: 0 0 0 40px;
+                .subHeadingItem {
+                    margin: 0 0 32px 0;
+                    a {
+                        font-size: 16px;
+                    }
+                }
             }
         }
     }
 }
-input[type="checkbox"]:checked ~ #sidebarMenu01 {
+input[type="checkbox"]:checked ~ #sidebarMenu02 {
     transform: translateX(0);
 }
 .openSidebarMenu {
@@ -116,7 +125,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 
 // PC時は表示しない
 @include mq(pc) {
-    #sidebarMenu01,
+    #sidebarMenu02,
     .spinner,
     .sidebarIconToggle {
         display: none;

@@ -2,7 +2,7 @@
   $uri = get_theme_file_uri();
 ?>
             <!-- 使いたいフッターパターンを適宜読み込み -->
-            <?php get_template_part('components/Layout/footer/footer03'); ?>
+            <?php get_template_part('components/Layout/footer/footer01'); ?>
         </div>
 
         <script src="<?= $uri ?>/js/jquery.3.4.1.js"></script>

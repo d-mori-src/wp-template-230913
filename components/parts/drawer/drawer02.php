@@ -14,19 +14,21 @@
 <div class="spinner horizontal"></div>
 <div class="spinner diagonal part-2"></div>
 </label>
-<div id="sidebarMenu01">
-<ul>
-  <li>
-    <img src="<?= $uri ?>/img/common/triangle.svg" class="icon" alt="icon" />
-    <a href="<?=$site_url;?>">HOME</a>
+<div id="sidebarMenu02">
+<ul class="majorHeading">
+  <li class="majorHeadingItem">
+    <a href="<?=$site_url;?>">ホーム<span>→</span></a>
   </li>
-  <li>
-    <img src="<?= $uri ?>/img/common/triangle.svg" class="icon" alt="icon" />
-    <a href="<?=$site_url;?>/post">POST</a>
+  <li class="majorHeadingItem">
+    <a href="<?=$site_url;?>/post">投稿<span>→</span></a>
+    <ul class="subHeading">
+      <li class="subHeadingItem"><a href="">サブメニュー<span>→</span></a></li>
+      <li class="subHeadingItem"><a href="">サブメニュー<span>→</span></a></li>
+      <li class="subHeadingItem"><a href="">サブメニュー<span>→</span></a></li>
+    </ul>
   </li>
-  <li>
-    <img src="<?= $uri ?>/img/common/triangle.svg" class="icon" alt="icon" />
-    <a href="<?=$site_url;?>/contact">CONTACT</a>
+  <li class="majorHeadingItem">
+    <a href="<?=$site_url;?>/contact">お問い合わせ</a>
   </li>
 </ul>
 </div><!-- /モバイルのみドロワーメニュー -->

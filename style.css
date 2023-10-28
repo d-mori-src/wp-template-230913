@@ -711,14 +711,12 @@ ul li {
     font-weight: bold;
     color: #fff;
     text-decoration: none;
-}
-.header04 .innerHeader .headerMenu li .active {
-    color: #2ED1A2;
-}
-.header04 .innerHeader .headerMenu li:hover {
     transition: all 0.5s;
 }
-.header04 .innerHeader .headerMenu li:hover a {
+.header04 .innerHeader .headerMenu li a:hover {
+    color: #2ED1A2;
+}
+.header04 .innerHeader .headerMenu li .active {
     color: #2ED1A2;
 }
 .header04 .innerHeader .headerMenu .megaMenu:hover .megaMenuSecond {
@@ -756,6 +754,10 @@ ul li {
     font-size: 14px;
     font-weight: bold;
     color: #fff;
+    transition: all 0.5s;
+}
+.header04 .innerHeader .headerMenu .megaMenu .megaMenuSecond .inner_child_menu ul li a:hover {
+    color: #2ED1A2;
 }
 .header04 .innerHeader .headerMenu .megaMenu .megaMenuSecond .inner_child_menu ul .heding {
     padding: 0 0 20px 0;

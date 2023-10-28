@@ -13,12 +13,12 @@
                 <img src="<?=$uri?>/img/common/logo_wh.svg" class="logo" alt="">
             </a>
         </div>
-        <ul class="center">
+        <ul class="headerMenu">
             <li><a href="<?=$site_url;?>" class="<?=$active = ($server_uri === '/') ? 'active' : ''; ?>">トップ</a></li>
             <li><a href="<?=$site_url;?>/post" class="<?=$active = ($server_uri === '/post/') ? 'active' : ''; ?>">最新情報</a></li>
-            <li class="parent_menu">
-                <a tabindex="-1">ホバーするメガメニュー</a>
-                <div class="child_menu">
+            <li class="megaMenu">
+                <a href="">ご利用サポート</a>
+                <div class="megaMenuSecond">
                     <div class="inner_child_menu">
                         <ul>
                             <li class="heding"><a href="">見出し<span>→</span></a></li>

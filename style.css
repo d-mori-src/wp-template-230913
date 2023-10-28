@@ -690,30 +690,44 @@ ul li {
     justify-content: space-between;
     width: calc(100% - 56px);
     margin: 0 auto;
-    padding: 16px 40px;
 }
 .header04 .innerHeader .left .logo {
     height: 40px;
 }
-.header04 .innerHeader .center {
+.header04 .innerHeader .headerMenu {
     display: flex;
-    gap: 0 40px;
     justify-content: flex-end;
     margin: 0 40px 0 auto;
-    width: 75%;
-}
-.header04 .innerHeader .center li a {
-    font-size: 12px;
-    font-family: "Josefin Sans", sans-serif;
-    color: #fff;
-}
-.header04 .innerHeader .center li .active {
-    padding: 0 0 25px 0;
-    border-bottom: 3px solid #26A782;
-}
-.header04 .innerHeader .center .parent_menu .child_menu {
+    gap: 0 40px;
     width: 100%;
-    position: absolute;
+    position: relative;
+    background: #333;
+}
+.header04 .innerHeader .headerMenu li {
+    padding: 28px 0;
+}
+.header04 .innerHeader .headerMenu li a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+.header04 .innerHeader .headerMenu li .active {
+    color: #2ED1A2;
+}
+.header04 .innerHeader .headerMenu li:hover {
+    transition: all 0.5s;
+}
+.header04 .innerHeader .headerMenu li:hover a {
+    color: #2ED1A2;
+}
+.header04 .innerHeader .headerMenu .megaMenu:hover .megaMenuSecond {
+    top: 75px;
+    display: block;
+}
+.header04 .innerHeader .headerMenu .megaMenu .megaMenuSecond {
+    width: 100%;
+    position: fixed;
     top: 100%;
     left: 0;
     color: #fff;
@@ -721,49 +735,48 @@ ul li {
     background: #333;
     display: none;
 }
-.header04 .innerHeader .center .parent_menu .child_menu .inner_child_menu {
+.header04 .innerHeader .headerMenu .megaMenu .megaMenuSecond .inner_child_menu {
     display: flex;
     gap: 0 28px;
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
 }
-.header04 .innerHeader .center .parent_menu .child_menu .inner_child_menu ul {
+.header04 .innerHeader .headerMenu .megaMenu .megaMenuSecond .inner_child_menu ul {
     width: 25%;
 }
-.header04 .innerHeader .center .parent_menu .child_menu .inner_child_menu ul li {
+.header04 .innerHeader .headerMenu .megaMenu .megaMenuSecond .inner_child_menu ul li {
     margin: 0 0 20px 0;
+    padding: 0;
 }
-.header04 .innerHeader .center .parent_menu .child_menu .inner_child_menu ul li:last-child {
+.header04 .innerHeader .headerMenu .megaMenu .megaMenuSecond .inner_child_menu ul li:last-child {
     margin: 0;
 }
-.header04 .innerHeader .center .parent_menu .child_menu .inner_child_menu ul li a {
+.header04 .innerHeader .headerMenu .megaMenu .megaMenuSecond .inner_child_menu ul li a {
     font-size: 14px;
     font-weight: bold;
     color: #fff;
 }
-.header04 .innerHeader .center .parent_menu .child_menu .inner_child_menu ul .heding {
+.header04 .innerHeader .headerMenu .megaMenu .megaMenuSecond .inner_child_menu ul .heding {
     padding: 0 0 20px 0;
     border-bottom: 1px solid #5F5F5F;
 }
-.header04 .innerHeader .center .parent_menu .child_menu .inner_child_menu ul .heding a {
+.header04 .innerHeader .headerMenu .megaMenu .megaMenuSecond .inner_child_menu ul .heding a {
     display: flex;
     justify-content: space-between;
     font-size: 16px;
 }
-.header04 .innerHeader .center .parent_menu .child_menu .inner_child_menu ul .heding a span {
+.header04 .innerHeader .headerMenu .megaMenu .megaMenuSecond .inner_child_menu ul .heding a span {
     font-size: 12px;
 }
-.header04 .innerHeader .center .parent_menu .child_menu .inner_child_menu ul .subheading a {
+.header04 .innerHeader .headerMenu .megaMenu .megaMenuSecond .inner_child_menu ul .subheading a {
     color: #717171;
-}
-.header04 .innerHeader .center .parent_menu:hover .child_menu {
-    display: block;
 }
 .header04 .innerHeader .right .btn {
     display: flex;
     justify-content: space-between;
     font-size: 14px;
+    font-weight: bold;
     color: #fff;
     width: 148px;
     padding: 14px 24px;

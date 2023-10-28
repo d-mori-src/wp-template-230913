@@ -13,38 +13,58 @@
         justify-content: space-between;
         width: calc(100% - 56px);
         margin: 0 auto;
-        padding: 16px 40px;
         .left {
             .logo {
                 height: 40px;
             }
         }
-        .center {
+        .headerMenu {
             display: flex;
-            gap: 0 40px;
-            // justify-content: flex-start; // 左
+
+            // 左揃え
+            // justify-content: flex-start;
             // margin: 0 auto 0 40px;
-            // justify-content: center; // センター
+
+            // 中央揃え
+            // justify-content: center;
             // margin: 0 auto;
-            justify-content: flex-end; // 右
+
+            // 右揃え
+            justify-content: flex-end;
             margin: 0 40px 0 auto;
-            width: 75%;
+
+            gap: 0 40px;
+            width: 100%;
+            position: relative;
+            background: #333;
             li {
+                padding: 28px 0;
                 a {
-                    font-size: 12px;
-                    font-family: 'Josefin Sans', sans-serif;
+                    font-size: 14px;
+                    font-weight: bold;
                     color: #fff;
+                    text-decoration: none;
                 }
                 .active {
-                    padding: 0 0 25px 0;
-                    border-bottom: 3px solid #26A782;
+                    color: #2ED1A2;
+                }
+                &:hover {
+                    transition: all 0.5s;
+                    a {
+                        color: #2ED1A2;
+                    }
                 }
             }
-            // メガメニュースタイル
-            .parent_menu {
-                .child_menu {
+            .megaMenu {
+                &:hover {
+                    .megaMenuSecond {
+                        top: 75px;
+                        display: block;
+                    }
+                }
+                .megaMenuSecond {
                     width: 100%;
-                    position: absolute;
+                    position: fixed;
                     top: 100%;
                     left: 0;
                     color: #fff;
@@ -61,6 +81,7 @@
                             width: 25%;
                             li {
                                 margin: 0 0 20px 0;
+                                padding: 0;
                                 &:last-child {
                                     margin: 0;
                                 }
@@ -90,11 +111,6 @@
                         }
                     }
                 }
-                &:hover {
-                    .child_menu {
-                        display: block;
-                    }
-                }
             }
         }
         .right {
@@ -102,6 +118,7 @@
                 display: flex;
                 justify-content: space-between;
                 font-size: 14px;
+                font-weight: bold;
                 color: #fff;
                 width: 148px;
                 padding: 14px 24px;

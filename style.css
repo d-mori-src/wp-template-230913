@@ -473,6 +473,10 @@ ul li {
     list-style: none;
 }
 
+img {
+    vertical-align: bottom;
+}
+
 .pc {
     display: block;
 }
@@ -1475,6 +1479,99 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     display: flex;
     justify-content: center;
     gap: 0 40px;
+}
+
+.card01 {
+    display: grid;
+    gap: 60px 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: calc(100% - 100px);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+    .card01 {
+        width: calc(100% - 40px);
+    }
+}
+.card01 .cardItem {
+    display: grid;
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+    row-gap: 20px;
+}
+.card01 .cardItem .image {
+    background: #ccc;
+}
+.card01 .cardItem .image img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+.card01 .cardItem .title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px 0;
+}
+.card01 .cardItem .title .tag {
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    padding: 4px 12px;
+    background: #367417;
+}
+.card01 .cardItem .title h3 {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #367417;
+}
+.card01 .cardItem .title .miniText {
+    font-size: 10px;
+    color: #5f5f5f;
+}
+.card01 .cardItem .lead {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #102d00;
+}
+.card01 .cardItem .btn {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #367417;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #367417;
+    border-radius: 60px;
+    transition: 0.5s;
+    position: relative;
+}
+.card01 .cardItem .btn span {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+}
+.card01 .cardItem .btn span svg {
+    width: 8px;
+    height: 14px;
+}
+.card01 .cardItem .btn span svg path {
+    stroke: #367417;
+}
+.card01 .cardItem .btn:hover {
+    color: #fff;
+    background: #367417;
+}
+.card01 .cardItem .btn:hover span svg path {
+    stroke: #fff;
 }
 
 .post {

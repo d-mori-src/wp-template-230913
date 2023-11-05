@@ -1,0 +1,100 @@
+@use "../../utils/utils" as *;
+
+.card02 {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: calc(100% - 100px);
+    max-width: 1366px;
+    margin: 0 auto;
+    background: #fff;
+    @include mq() {
+        width: calc(100% - 40px);
+    }
+    .cardItem {
+        display: grid;
+        grid-row: span 4; // rowアイテム数を記載
+        grid-template-rows: subgrid;
+        row-gap: 24px;
+        border: 1px solid #cbd5e1;
+        cursor: pointer;
+        transition: .5s;
+        &:hover {
+            background: #80befc;
+            transform: translateY(-10px);
+        }
+        &:hover:has(.cardAuthorLink:hover) {
+            background: #fff;
+        }
+        position: relative;
+        .link {
+            position:absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .cardImage {
+            width: 100%;
+            background: #eee;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 16 / 9;
+                object-fit: cover;
+                transition: 1s;
+                &:hover {
+                    transform:scale(1.3,1.3);
+                }
+            }
+        }
+        h3 {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.4;
+            align-self: center;
+        }
+        .cardDescription {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        .cardAuthor {
+            .cardAuthorLink {
+                display: flex;
+                font-size: 14px;
+                gap: 0 10px;
+                align-items: center;
+                transition: 1s;
+                width: fit-content;
+                border-radius: calc(Infinity * 1px); // calc(1px / 0)
+                padding: 8px 16px;
+                background: #c9e2fa;
+                position: relative;
+                z-index: 1;
+                &:hover {
+                    color: #fff;
+                    background: #72b8f9;
+                    .cardAvatar {
+                        border: 1px solid #fff;
+                        width: 40px;
+                    }
+                }
+                .cardAvatar {
+                    border: 1px solid #99bbe8;
+                    width: 20px;
+                    transition: 1s;
+                }
+            }
+        }
+        h3, 
+        .cardDescription {
+            padding: 0 20px;
+        }
+        .cardAuthor {
+            padding: 0 20px 30px;
+        }
+    }
+}

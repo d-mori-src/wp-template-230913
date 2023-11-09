@@ -1,0 +1,33 @@
+.squareMenuBase {
+    // メニュー位置調整
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    .item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        --angle: calc(180deg + calc(360deg / 12 * var(--index)));
+        --x: calc(cos(var(--angle)) * 160px);
+        --y: calc(sin(var(--angle)) * 160px);
+        translate: calc(var(--x) - 50%) calc(var(--y) - 50%);
+        a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #eee;
+            transition: 1s;
+            cursor: pointer;
+            &:hover {
+                color: #fff;
+                background: #6a00ff;
+            }
+        }
+    }
+}

@@ -6,9 +6,10 @@
 <?php get_header(); ?>
 
 <main class="top">
-    <?php get_template_part('components/parts/mega/mega01'); ?>
-    <?php get_template_part('components/parts/card/card01'); ?>
-    <?php get_template_part('components/parts/card/card02'); ?>
+    <?php // get_template_part('components/parts/mega/mega01'); ?>
+    <?php // get_template_part('components/parts/card/card01'); ?>
+    <?php // get_template_part('components/parts/card/card02'); ?>
+    <?php get_template_part('components/parts/square_menu/square_menu_base'); ?>
     <!-- <div class="box boxA">トップページが入ります。</div>
     <div class="box boxB"><h2>トップページが入ります。</h2></div>
     <div class="conditionBoxA">トップページが入ります。</div>

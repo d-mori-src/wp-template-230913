@@ -1,4 +1,4 @@
-<ul class="squareMenuBase">
+<ul class="circleMenuBase">
     <li class="item" style="--index: 0;"><a href="">0</a></li>
     <li class="item" style="--index: 1;"><a href="">1</a></li>
     <li class="item" style="--index: 2;"><a href="">2</a></li>

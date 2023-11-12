@@ -15,6 +15,10 @@ $(function() {
         $('.sitemapHide').slideToggle(200);
     });
 
+    $('.circleButton01').on('click', function() {
+        $('.circleMenu01').toggle();
+    });
+
     // $(window).on('load',function(){
     //     $('#splate').delay(200).animate(
     //         {'opacity': 1},{duration: 500}

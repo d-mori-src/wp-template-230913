@@ -1706,6 +1706,92 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     background: #6a00ff;
 }
 
+.circleButton01 {
+    position: fixed;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+}
+
+.circleButton01 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #333;
+    transition: 1s;
+    cursor: pointer;
+}
+.circleButton01 svg {
+    width: 20px;
+}
+.circleButton01 svg path {
+    fill: #fff;
+}
+.circleButton01:hover {
+    background: #ccc;
+}
+.circleButton01:hover svg path {
+    fill: #333;
+}
+
+.circleMenu01 {
+    display: none;
+    position: fixed;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    animation-name: animation;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+.circleMenu01 .item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    --angle: calc(180deg + calc(360deg / 8 * var(--index)));
+    --x: calc(cos(var(--angle)) * 100px);
+    --y: calc(sin(var(--angle)) * 100px);
+    translate: calc(var(--x) - 50%) calc(var(--y) - 50%);
+}
+.circleMenu01 .item a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #333;
+    transition: 1s;
+    cursor: pointer;
+}
+.circleMenu01 .item a svg {
+    width: 20px;
+}
+.circleMenu01 .item a svg path {
+    stroke: #fff;
+}
+.circleMenu01 .item a:hover {
+    background: #ccc;
+}
+.circleMenu01 .item a:hover svg path {
+    stroke: #333;
+}
+
 .post {
     margin: 90px auto;
 }

@@ -47,7 +47,6 @@
         }
         100%{
             opacity: 1;
-            transform: scale(1.1);
         }
     }
     .item {
@@ -57,7 +56,18 @@
         --angle: calc(180deg + calc(360deg / 8 * var(--index)));
         --x: calc(cos(var(--angle)) * 100px);
         --y: calc(sin(var(--angle)) * 100px);
-        translate: calc(var(--x) - 50%) calc(var(--y) - 50%);
+        animation-name: menu-motion;
+        animation-duration: .5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        @keyframes menu-motion {
+            0%{
+                translate: 50% 50%;
+            }
+            100%{
+                translate: calc(var(--x) - 50%) calc(var(--y) - 50%);
+            }
+        }
         a {
             display: flex;
             flex-direction: column;

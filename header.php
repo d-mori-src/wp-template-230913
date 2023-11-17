@@ -21,6 +21,9 @@
     <link rel="apple-touch-icon" href="<?= $uri ?>/meta/icon.png">
     <link rel="shortcut icon" href="<?= $uri ?>/meta/favicon.ico">
 
+    <link rel="stylesheet" href="<?php echo $uri ?>/js/swiper-bundle.min.css">
+    <script type="text/javascript" src="<?php echo $uri ?>/js/swiper-bundle.min.js"></script>
+
     <!-- safari用フォント -->
     <?php $user_agent = $_SERVER['HTTP_USER_AGENT']; ?>
     <?php if (strpos($user_agent, 'Safari') !== false && strpos($user_agent, 'Chrome') === false): ?>

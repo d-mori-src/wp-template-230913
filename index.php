@@ -9,6 +9,8 @@
     <?php // get_template_part('components/parts/mega/mega01'); ?>
     <?php // get_template_part('components/parts/card/card01'); ?>
     <?php // get_template_part('components/parts/card/card02'); ?>
+    <?php get_template_part('components/parts/slide/slide01'); ?>
+    
     <?php get_template_part('components/parts/circle_menu/circle_menu01'); ?>
 
     <!-- sass練習 -->

@@ -12,6 +12,7 @@
     <?php // get_template_part('components/parts/circle_menu/circle_menu01'); ?>
     <?php // get_template_part('components/parts/slide/slide01'); ?>
     <?php get_template_part('components/parts/tab/tab01'); ?>
+    <?php get_template_part('components/parts/tab/tab02'); ?>
 
     <!-- sass練習 -->
     <!-- <div class="box boxA">トップページが入ります。</div>

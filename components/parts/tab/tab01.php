@@ -1,6 +1,6 @@
 <div class="tab01">
-    <input id="tab-01" type="radio" name="tab" class="tabSwitch" checked="checked" />
-    <label class="tabLabel tabLabelLeft" for="tab-01">すべて</label>
+    <input id="tab01-01" type="radio" name="tab01" class="tabSwitch" checked="checked" />
+    <label class="tabLabel tabLabelLeft" for="tab01-01">すべて</label>
     <div class="tabContent">
         <!-- すべてループ表示 -->
         <ul>
@@ -10,21 +10,24 @@
         </ul>
     </div>
 
-    <input id="tab-02" type="radio" name="tab" class="tabSwitch" />
-    <label class="tabLabel" for="tab-02">お知らせ</label>
+    <input id="tab01-02" type="radio" name="tab01" class="tabSwitch" />
+    <label class="tabLabel" for="tab01-02">お知らせ</label>
     <div class="tabContent">
         <!-- 条件に合わせてループ表示 -->
+        2
     </div>
 
-    <input id="tab-03" type="radio" name="tab" class="tabSwitch" />
-    <label class="tabLabel" for="tab-03">プレスリリース</label>
+    <input id="tab01-03" type="radio" name="tab01" class="tabSwitch" />
+    <label class="tabLabel" for="tab01-03">プレスリリース</label>
     <div class="tabContent">
         <!-- 条件に合わせてループ表示 -->
+        3
     </div>
 
-    <input id="tab-04" type="radio" name="tab" class="tabSwitch" />
-    <label class="tabLabel tabLabelRight" for="tab-04">メディア情報</label>
+    <input id="tab01-04" type="radio" name="tab01" class="tabSwitch" />
+    <label class="tabLabel tabLabelRight" for="tab01-04">メディア情報</label>
     <div class="tabContent">
         <!-- 条件に合わせてループ表示 -->
+        4
     </div>
 </div>

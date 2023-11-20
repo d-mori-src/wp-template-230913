@@ -1,0 +1,85 @@
+.tab02 {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 100px);
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    .tabLabel {
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        width: 160px;
+        color: #333;
+        padding: 20px;
+        border-bottom: 1px solid #e05f5f;
+        background: #ffefef;
+        order: -1;
+    }
+    .tabLabelRight::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #e05f5f;
+        position: absolute;
+        right: 0;
+        top: 59px;
+    }
+    .tabContent {
+        width: 100%;
+        display: none;
+        padding: 40px 0 0;
+        border-left: 1px solid #e05f5f;
+        ul {
+            li {
+                margin: 0 0 30px 0;
+                padding: 0 60px;
+                &:last-child {
+                    margin: 0;
+                }
+                a {
+                    display: flex;
+                    gap: 0 40px;
+                    text-align: justify;
+                    font-size: 14px;
+                    line-height: 1.6;
+                    letter-spacing: 1px;
+                    h4 {
+                        display: flex;
+                        justify-content: space-between;
+                        font-weight: 500;
+                        font-family: 'Poppins', sans-serif;
+                        width: 240px;
+                        span {
+                            text-align: center;
+                            font-size: 12px;
+                            font-family: 'Josefin Sans', sans-serif;
+                            color: #fff;
+                            height: 23px;
+                            padding: 4px 8px 0;
+                            background: #e05f5f;
+                        }
+                    }
+                    p {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .tabSwitch:checked + .tabLabel {
+        color: #fff;
+        border-top: 1px solid #e05f5f;
+        border-right: 1px solid #e05f5f;
+        border-bottom: none;
+        border-left: 1px solid #e05f5f;
+        background: #e05f5f;
+    }
+    .tabSwitch:checked + .tabLabel + .tabContent {
+        display: block;
+    }
+    .tabSwitch {
+        display: none;
+    }
+}

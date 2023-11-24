@@ -1,3 +1,5 @@
+@use "../../utils/utils" as *;
+
 .grid01 {
     // レイアウト
     width: 100%;
@@ -15,7 +17,7 @@
     "areaA areaA areaB areaC"
     "areaA areaA areaD areaE"
     "areaG areaH areaF areaF";
-    @media screen and (max-width:767px) {
+    @include mq() {
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
         "areaA areaA"

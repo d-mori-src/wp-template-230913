@@ -1,0 +1,55 @@
+.grid01 {
+    // レイアウト
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    // grid
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; // 均等な幅
+    // grid-template-columns: 1fr 1fr 200px 200px; // フレームの幅を変える場合
+    grid-auto-rows: 240px; // 均等な高さ
+    // grid-template-rows: 300px 300px 200px; // フレームの高さを変える場合
+    gap: 0px;
+    grid-template-areas: 
+    "areaA areaA areaB areaC"
+    "areaA areaA areaD areaE"
+    "areaG areaH areaF areaF";
+    @media screen and (max-width:767px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "areaA areaA"
+        "areaA areaA"
+        "areaB areaC"
+        "areaD areaE"
+        "areaF areaF"
+        "areaG areaH";
+    }
+    
+    .item {
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        span { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            text-align: center; 
+            font-size: 16px; 
+            color: #333; 
+            padding: 10px 16px; 
+            background: #fff; 
+        }
+    }
+    .itemA { grid-area: areaA; }
+    .itemB { grid-area: areaB; }
+    .itemC { grid-area: areaC; }
+    .itemD { grid-area: areaD; }
+    .itemE { grid-area: areaE; }
+    .itemF { grid-area: areaF; }
+    .itemG { grid-area: areaG; }
+    .itemH { grid-area: areaH; }
+}

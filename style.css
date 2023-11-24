@@ -2042,6 +2042,65 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     display: none;
 }
 
+.grid01 {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 240px;
+    gap: 0px;
+    grid-template-areas: "areaA areaA areaB areaC" "areaA areaA areaD areaE" "areaG areaH areaF areaF";
+}
+@media screen and (max-width: 767px) {
+    .grid01 {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "areaA areaA" "areaA areaA" "areaB areaC" "areaD areaE" "areaF areaF" "areaG areaH";
+    }
+}
+.grid01 .item {
+    position: relative;
+}
+.grid01 .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.grid01 .item span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    padding: 10px 16px;
+    background: #fff;
+}
+.grid01 .itemA {
+    grid-area: areaA;
+}
+.grid01 .itemB {
+    grid-area: areaB;
+}
+.grid01 .itemC {
+    grid-area: areaC;
+}
+.grid01 .itemD {
+    grid-area: areaD;
+}
+.grid01 .itemE {
+    grid-area: areaE;
+}
+.grid01 .itemF {
+    grid-area: areaF;
+}
+.grid01 .itemG {
+    grid-area: areaG;
+}
+.grid01 .itemH {
+    grid-area: areaH;
+}
+
 .post {
     margin: 90px auto;
 }

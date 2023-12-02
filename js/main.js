@@ -9,14 +9,10 @@ $(function() {
     // 都道府県を出力する
     prefecturesFunc();
 
-    // sitemap more btn
+    // footer01 sitemap more btn
     $('.sitemapMore').on('click', function() {
         $(this).toggleClass('on-click');
         $('.sitemapHide').slideToggle(200);
-    });
-
-    $('.circleButton01').on('click', function() {
-        $('.circleMenu01').toggle();
     });
 
     // $(window).on('load',function(){

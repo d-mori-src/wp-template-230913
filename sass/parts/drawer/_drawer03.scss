@@ -73,6 +73,7 @@
         background: #fff5e3;
         transition: .5s;
         overflow: hidden;
+        z-index: 1000;
         .innerMenu {
             display: flex;
             justify-content: space-between;

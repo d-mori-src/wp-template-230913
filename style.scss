@@ -26,6 +26,4 @@
 @use "sass/parts/grid/grid";
 
 // 各種Mainページ
-// @use "sass/page/top"; // cssディレクトリに移動
-@use "sass/page/post";
-@use "sass/page/contact";
+// cssディレクトリで読み込み

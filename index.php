@@ -13,7 +13,7 @@
     <?php // get_template_part('components/parts/slide/slide01'); ?>
     <?php // get_template_part('components/parts/tab/tab01'); ?>
     <?php // get_template_part('components/parts/tab/tab02'); ?>
-    <?php get_template_part('components/parts/grid/grid01'); ?>
+    <?php // get_template_part('components/parts/grid/grid01'); ?>
 
     <!-- sass練習 -->
     <!-- <div class="box boxA">トップページが入ります。</div>

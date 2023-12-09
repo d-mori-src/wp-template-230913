@@ -78,6 +78,9 @@
         <link rel="stylesheet" href="<?php echo $uri ?>/css/contact.min.css?<?php echo date('YmdHis'); ?>">
     <?php endif;?>
 
+    <!-- Lightbox -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
+
     <?php if (!is_production_environment()): ?>
         <!-- 開発・テストサーバー時のみ -->
         <meta name="robots" content="noindex,nofollow" />

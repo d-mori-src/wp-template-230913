@@ -2200,3 +2200,75 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 .grid01 .itemH {
     grid-area: areaH;
 }
+
+.gallery01 {
+    width: calc(100% - 200px);
+    max-width: 1180px;
+    margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+    .gallery01 {
+        width: calc(100% - 40px);
+    }
+}
+.gallery01 .categoryList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 30px;
+    margin: 0 0 20px 0;
+}
+.gallery01 .categoryList button {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    background: none;
+    transition: 0.5s;
+}
+.gallery01 .categoryList button:hover {
+    color: #ce0000;
+}
+@media screen and (max-width: 767px) {
+    .gallery01 .categoryList button {
+        font-size: 12px;
+    }
+}
+.gallery01 .categoryList .active {
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: calc(infinity * 1px);
+    background: #000;
+}
+.gallery01 .categoryList .active:hover {
+    color: #fff;
+    background: #ce0000;
+}
+@media screen and (max-width: 767px) {
+    .gallery01 .categoryList .active {
+        width: 100%;
+    }
+}
+.gallery01 .galleryList {
+    columns: 4;
+    gap: 20px;
+}
+@media screen and (max-width: 767px) {
+    .gallery01 .galleryList {
+        columns: 2;
+    }
+}
+.gallery01 .galleryList li {
+    margin: 0 0 20px 0;
+}
+.gallery01 .galleryList li a img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+.gallery01 .galleryList li a h3 {
+    text-align: justify;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
+    margin: 10px 0 0 0;
+}

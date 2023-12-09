@@ -13,6 +13,9 @@
     <link href="<?= $uri ?>/js/slick.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="<?= $uri ?>/js/slick.min.js"></script>
     <script src="<?= $uri ?>/js/thumb_slide.js"></script>
+
+    <!-- Lightbox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
   <?php wp_footer(); ?>
   </body>
 </html>

@@ -15,6 +15,9 @@ $(function() {
         $('.sitemapHide').slideToggle(200);
     });
 
+    // アコーディオンボックス
+    accordionBox();
+
     // $(window).on('load',function(){
     //     $('#splate').delay(200).animate(
     //         {'opacity': 1},{duration: 500}
@@ -168,3 +171,24 @@ const prefecturesFunc = () => {
         $prefecturesSelect.append($optgroup);
     });
 }
+
+// アコーディオンボックス
+const accordionBox = () => {
+    $('.title').on('click', function() {
+        // メニュー開閉
+        const findElm = $(this).next('.box');
+        $(findElm).slideToggle();
+        $(this).toggleClass('close');
+
+        // 開いているアコーディオンボックス以外を閉じる(適宜コメントアウト)
+        $('.title').not(this).removeClass('close');
+        $('.box').not(findElm).slideUp(500);
+    });
+
+    // 最初のアコーディオンボックスを開く(適宜コメントアウト)
+    const firstAccordion = $('.accordionArea li:first-of-type');
+    const firstTitle = firstAccordion.children('.title');
+    const firstBox = firstAccordion.children('.box');
+    firstTitle.addClass('close');
+    firstBox.slideDown(500);
+};

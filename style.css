@@ -2272,3 +2272,113 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     color: #333;
     margin: 10px 0 0 0;
 }
+
+.accordionArea01 {
+    width: calc(100% - 100px);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+    .accordionArea01 {
+        width: calc(100% - 40px);
+    }
+}
+.accordionArea01 li {
+    margin: 0 0 16px 0;
+    border: 1px solid #ccc;
+    transition: 0.5s;
+}
+.accordionArea01 li .title {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+    font-size: 16px;
+    color: #27A5A0;
+    padding: 12px 64px 12px 40px;
+    background: #eee;
+    transition: 0.5s;
+    cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+    .accordionArea01 li .title {
+        padding: 12px 30px 12px 20px;
+    }
+}
+.accordionArea01 li .title:hover {
+    color: #eee;
+    background: #27A5A0;
+}
+.accordionArea01 li .title:hover::before, .accordionArea01 li .title:hover::after {
+    background: #fff;
+}
+.accordionArea01 li .title h4 {
+    font-size: 24px;
+    font-family: "EB Garamond", serif;
+    font-weight: 300;
+    padding: 8px 24px 8px 0;
+    border-right: 1px solid #ccc;
+}
+.accordionArea01 li .title::before, .accordionArea01 li .title::after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 2px;
+    background: #27A5A0;
+}
+.accordionArea01 li .title::before {
+    top: 50%;
+    right: 40px;
+    transform: rotate(0deg);
+}
+@media screen and (max-width: 767px) {
+    .accordionArea01 li .title::before {
+        right: 10px;
+    }
+}
+.accordionArea01 li .title::after {
+    top: 50%;
+    right: 40px;
+    transform: rotate(90deg);
+}
+@media screen and (max-width: 767px) {
+    .accordionArea01 li .title::after {
+        right: 10px;
+    }
+}
+.accordionArea01 li .close::before {
+    transform: rotate(45deg);
+}
+.accordionArea01 li .close::after {
+    transform: rotate(-45deg);
+}
+.accordionArea01 li .box {
+    display: none;
+}
+.accordionArea01 li .box .innerBox {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 12px 40px;
+}
+@media screen and (max-width: 767px) {
+    .accordionArea01 li .box .innerBox {
+        padding: 12px 30px 12px 20px;
+    }
+}
+.accordionArea01 li .box .innerBox h4 {
+    font-size: 24px;
+    font-family: "EB Garamond", serif;
+    font-weight: 300;
+    padding: 8px 24px 8px 0;
+    border-right: 1px solid #ccc;
+}
+.accordionArea01 li .box .innerBox p {
+    font-size: 14px;
+    color: #333;
+}
+.accordionArea01 li .box .innerBox p a {
+    display: block;
+    color: #27A5A0;
+    margin: 4px 0 0 0;
+}

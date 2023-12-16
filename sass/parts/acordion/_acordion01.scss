@@ -1,0 +1,105 @@
+@use "../../utils/utils" as *;
+
+.accordionArea01 {
+    width: calc(100% - 100px);
+    max-width: 1100px;
+    margin: 0 auto;
+    @include mq() {
+        width: calc(100% - 40px);
+    }
+    li {
+        margin: 0 0 16px 0;
+        border: 1px solid #ccc;
+        transition: .5s;
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            position: relative;
+            font-size: 16px;
+            color: #27A5A0;
+            padding: 12px 64px 12px 40px;
+            background: #eee;
+            transition: .5s;
+            cursor: pointer;
+            @include mq() {
+                padding: 12px 30px 12px 20px;
+            }
+            &:hover {
+                color: #eee;
+                background: #27A5A0;
+                &::before,
+                &::after {
+                    background: #fff;
+                }
+            }
+            h4 {
+                font-size: 24px;
+                font-family: 'EB Garamond', serif;
+                font-weight: 300;
+                padding: 8px 24px 8px 0;
+                border-right: 1px solid #ccc;
+            }
+            &::before,
+            &::after {
+                position: absolute;
+                content:'';
+                width: 16px;
+                height: 2px;
+                background: #27A5A0;
+            }
+            &::before {
+                top: 50%;
+                right: 40px;
+                transform: rotate(0deg);
+                @include mq() {
+                    right: 10px;
+                }
+            }
+            &::after {
+                top: 50%;
+                right: 40px;
+                transform: rotate(90deg);
+                @include mq() {
+                    right: 10px;
+                }
+            }
+        }
+        .close {
+            &::before {
+                transform: rotate(45deg);
+            }
+            &::after {
+                transform: rotate(-45deg);
+            }
+        }
+        .box {
+            display: none;
+            .innerBox {
+                display: flex;
+                align-items: center;
+                gap: 24px;
+                padding: 12px 40px;
+                @include mq() {
+                    padding: 12px 30px 12px 20px;
+                }
+                h4 {
+                    font-size: 24px;
+                    font-family: 'EB Garamond', serif;
+                    font-weight: 300;
+                    padding: 8px 24px 8px 0;
+                    border-right: 1px solid #ccc;
+                }
+                p {
+                    font-size: 14px;
+                    color: #333;
+                    a {
+                        display: block;
+                        color: #27A5A0;
+                        margin: 4px 0 0 0;
+                    }
+                }
+            }
+        }
+    }
+}

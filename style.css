@@ -2382,3 +2382,147 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     color: #27A5A0;
     margin: 4px 0 0 0;
 }
+
+.page01 {
+    display: flex;
+    font-size: 12px;
+    font-family: "Crimson Text", "Noto Serif JP", serif;
+    line-height: 2.5;
+    background: #eee;
+}
+.page01 .leftHeader {
+    width: 500px;
+    margin: 0 50px 0 0;
+}
+.page01 .leftHeader .logoImage {
+    width: 105px;
+    left: 60px;
+    bottom: 85px;
+    position: fixed;
+}
+.page01 .leftHeader .mainNav {
+    font-size: 24px;
+    line-height: 40px;
+    list-style: none;
+    left: 200px;
+    bottom: 275px;
+    position: fixed;
+}
+.page01 .leftHeader .mainNav::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 240px;
+    position: fixed;
+    z-index: -1;
+    left: 165px;
+    bottom: 232px;
+    background: rgba(0, 0, 0, 0.2);
+    transform: rotate(36deg);
+    transform-origin: left bottom;
+}
+.page01 .leftHeader .subNav {
+    font-size: 16px;
+    line-height: 32px;
+    list-style: none;
+    left: 200px;
+    bottom: 180px;
+    position: fixed;
+}
+.page01 .leftHeader .subNav a {
+    color: #696969;
+}
+.page01 .rightContents {
+    width: 100%;
+    margin: 0 0 100px 0;
+}
+.page01 .rightContents .mainImage {
+    width: 100%;
+    max-height: 700px;
+    object-fit: cover;
+}
+.page01 .rightContents .titleCopy {
+    letter-spacing: 0.1em;
+    text-align: right;
+    font-size: 20px;
+    font-family: "Cormorant", serif;
+    margin: 50px 10vw 15px 0;
+}
+.page01 .rightContents .jp {
+    text-align: left;
+    margin: 30px 10vw 0 0;
+}
+.page01 .rightContents .en {
+    letter-spacing: 0.1em;
+    color: #696969;
+    text-align: right;
+    font-family: "Cormorant", serif;
+    line-height: 1.7;
+    margin: 0 10vw 100px 0;
+}
+.page01 .rightContents .en2 {
+    margin: 30px 10vw 100px 0;
+}
+.page01 .rightContents .headButton a {
+    display: block;
+    width: 200px;
+    height: 65px;
+    font-size: 20px;
+    font-family: "Cormorant", serif;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 0 15px 0;
+    background: #444444;
+    color: #fff;
+    right: 75px;
+    top: 0;
+    position: fixed;
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    transition: 0.5s;
+    z-index: 1;
+}
+.page01 .rightContents .headButton a:hover {
+    background: #808080;
+}
+.page01 .rightContents .headButton a span {
+    font-size: 10px;
+    margin: 0 0 0 10px;
+}
+.page01 .rightContents .headButton a span::before, .page01 .rightContents .headButton a span::after {
+    content: "ー";
+}
+.page01 .rightContents .content {
+    display: flex;
+}
+.page01 .rightContents .content .contentTitle {
+    width: 120px;
+    height: 100%;
+    font-size: 32px;
+}
+.page01 .rightContents .content .contentTitle p {
+    text-align: right;
+    left: -55px;
+    position: relative;
+}
+.page01 .rightContents .content .contentTitle::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 200px;
+    position: relative;
+    z-index: -1;
+    left: -45px;
+    bottom: 110px;
+    background: rgba(0, 0, 0, 0.2);
+    transform: rotate(36deg);
+    transform-origin: left bottom;
+}
+.page01 .rightContents .content .contentComponent {
+    width: 100%;
+    margin: 100px 0 0 0;
+}
+.page01 .rightContents .content .contentImage {
+    width: 90%;
+    object-fit: cover;
+}

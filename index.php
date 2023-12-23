@@ -5,7 +5,10 @@
 
 <?php get_header(); ?>
 
-<main class="top">
+<!-- Page mainクラス込み -->
+<?php get_template_part('components/Page/page01/page01'); ?>
+
+<!-- <main class="top"> -->
     <?php // get_template_part('components/parts/mega/mega01'); ?>
     <?php // get_template_part('components/parts/card/card01'); ?>
     <?php // get_template_part('components/parts/card/card02'); ?>
@@ -22,6 +25,6 @@
     <div class="box boxB"><h2>トップページが入ります。</h2></div>
     <div class="conditionBoxA">トップページが入ります。</div>
     <div class="conditionBoxB">トップページが入ります。</div> -->
-</main>
+<!-- </main> -->
 
 <?php get_footer(); ?>

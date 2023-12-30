@@ -1,0 +1,84 @@
+.sticky01 {
+    display: flex;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    background: #89c3cc;
+    height: 100%;
+    position: relative;
+    .left,
+    .right {
+        position: sticky;
+        top: 0;
+        width: calc(100% / 3);
+        height: 100dvh;
+        overflow: hidden;
+        background: #89c3cc;
+        @media screen and (max-width:1024px) {
+            width: 20%;
+        }
+        @media screen and (max-width:768px) {
+            display: none;
+        }
+    }
+    .left {
+        overflow: hidden;
+        .house {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            width: 70%;
+            @media screen and (max-width:1024px) {
+                display: none;
+            }
+        }
+        .cloud {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%);
+            animation: cloudAnimation 10s linear infinite;
+            @media screen and (max-width:1024px) {
+                width: 200%;
+            }
+            @media screen and (max-width:768px) {
+                display: none;
+            }
+        }
+        @keyframes cloudAnimation {
+            0% { left: 100%; }
+            100% { left: -100%; }
+        }
+    }
+    .right {
+        p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            @media screen and (max-width:1024px) {
+                display: none;
+            }
+        }
+    }
+    .contents {
+        width: calc(100% / 3);
+        height: 100%;
+        border-right: 1px solid #333;
+        border-left: 1px solid #333;
+        background: #89c3cc;
+        position: relative;
+        z-index: 100;
+        .dammy {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        @media screen and (max-width:1024px) {
+            width: 60%;
+        }
+        @media screen and (max-width:768px) {
+            width: 100%;
+        }
+    }
+}

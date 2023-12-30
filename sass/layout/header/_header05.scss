@@ -1,0 +1,24 @@
+.header05 {
+    padding: 16px;
+    ul {
+        display: flex;
+        justify-content: flex-end;
+        gap: 0 32px;
+        width: calc(100% - 200px);
+        max-width: 1160px;
+        margin: 0 auto;
+        @media screen and (max-width:768px) {
+            justify-content: center;
+            width: calc(100% - 40px);
+        }
+        li {
+            a {
+                font-size: 11px;
+                transition: .5s;
+                &:hover {
+                    color: #ba0c0c;
+                }
+            }
+        }
+    }
+}

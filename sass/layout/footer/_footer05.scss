@@ -1,0 +1,136 @@
+.footer05 {
+    .bread {
+        padding: 8px 0;
+        background: #eee;
+        ul {
+            display: flex;
+            gap: 0 8px;
+            width: calc(100% - 200px);
+            max-width: 1160px;
+            margin: 0 auto;
+            @media screen and (max-width:768px) {
+                width: calc(100% - 40px);
+            }
+            li {
+                font-size: 11px;
+                color: #333;
+                a {
+                    transition: .5s;
+                    &:hover {
+                        color: #ba0c0c;
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        width: calc(100% - 200px);
+        max-width: 1160px;
+        margin: 0 auto;
+        padding: 24px 0 36px;
+        @media screen and (max-width:768px) {
+            width: calc(100% - 40px);
+        }
+        .itemLink {
+            margin: 0 0 32px 0;
+            h4 {
+                font-size: 14px;
+                font-weight: bold;
+                margin: 0 0 4px 0;
+                padding: 0 0 16px 0;
+                border-bottom: 1px solid #eee;
+            }
+            .link {
+                display: flex;
+                justify-content: space-between;
+                gap: 0 28px;
+                font-size: 11px;
+                margin: 0 0 16px 0;
+                padding: 0 0 4px 0;
+                border-bottom: 1px solid #eee;
+                li {
+                    width: 50%;
+                    padding: 18px 28px 18px 0;
+                    border-right: 1px solid #eee;
+                    a {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        span {
+                            font-size: 16px;
+                            font-weight: bold;
+                            transform: scaleX(75%);
+                            border-radius: 4px;
+                        }
+                    }
+                    &:last-child {
+                        margin: 0;
+                        padding: 18px 0 18px;
+                        border-right: none;
+                    }
+                }
+            }
+            .four {
+                li {
+                    width: 25%;
+                }
+                @media screen and (max-width:768px) {
+                    flex-wrap: wrap;
+                    gap: 0;
+                    li {
+                        &:nth-child(1),
+                        &:nth-child(2) {
+                            border-bottom: 1px solid #eee;
+                        }
+                        &:nth-child(odd) {
+                            width: 46%;
+                        }
+                        &:nth-child(even) {
+                            width: 54%;
+                            padding: 18px 0 18px 28px;
+                            border-right: none;
+                        }
+                    }
+                }
+            }
+        }
+        .subNavi {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0 8px;
+            margin: 0 0 32px 0;
+            li {
+                height: 11px;
+                padding: 0 8px 0 0;
+                border-right: 1px solid #333;
+                &:first-child {
+                    padding: 0 8px;
+                    border-left: 1px solid #333;
+                }
+                a {
+                    font-size: 11px;
+                    position: relative;
+                    bottom: 8px;
+                }
+            }
+            @media screen and (max-width:768px) {
+                flex-direction: column;
+                gap: 16px 0;
+                li {
+                    padding: 0;
+                    border-right: none;
+                    &:first-child {
+                        padding: 0;
+                        border-left: none;
+                    }
+                }
+            }
+        }
+        .copyright {
+            text-align: center;
+            font-size: 11px;
+            color: #333;
+        }
+    }
+}

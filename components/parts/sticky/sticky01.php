@@ -1,14 +1,10 @@
-<?php
-    $uri = get_theme_file_uri(); // ルートpath
-?>
-
 <div class="sticky01">
     <div class="left">
-        <img src="<?= $uri ?>/img/parts/sticky/sticky01/cloud.svg" class="cloud" alt="ダミー">
-        <img src="<?= $uri ?>/img/parts/sticky/sticky01/img01.webp" class="house" alt="ダミー">
+        <img src="https://firebasestorage.googleapis.com/v0/b/react-image-sample.appspot.com/o/cloud.svg?alt=media&token=1b186941-9d78-4f87-b995-1eda97b2a3b4" class="cloud" alt="ダミー">
+        <img src="https://firebasestorage.googleapis.com/v0/b/react-image-sample.appspot.com/o/img01.webp?alt=media&token=acf47490-c67c-4c89-9108-086ee107f8f6" class="house" alt="ダミー">
     </div>
     <div class="contents">
-        <img src="<?= $uri ?>/img/parts/sticky/sticky01/dragonball.jpg" class="dammy" alt="ダミー">
+        <img src="https://firebasestorage.googleapis.com/v0/b/react-image-sample.appspot.com/o/dragonball.jpg?alt=media&token=f0aa872c-bc33-46a7-97a8-153e23617fa2" class="dammy" alt="ダミー">
     </div>
     <div class="right">
         <p>

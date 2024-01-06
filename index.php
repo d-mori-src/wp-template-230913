@@ -19,7 +19,7 @@
     <?php // get_template_part('components/parts/grid/grid01'); ?>
     <?php // get_template_part('components/parts/gallery/gallery01'); ?>
     <?php //get_template_part('components/parts/acordion/acordion01'); ?>
-    <?php get_template_part('components/parts/sticky/sticky01'); ?>
+    <?php // get_template_part('components/parts/sticky/sticky01'); ?>
 
     <!-- sass練習用(保留) -->
     <!-- <div class="box boxA">トップページが入ります。</div>

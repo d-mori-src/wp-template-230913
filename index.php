@@ -5,6 +5,8 @@
 
 <?php get_header(); ?>
 
+<?php get_template_part('components/parts/splash/splash01'); ?>
+
 <!-- Page mainクラス込み -->
 <?php // get_template_part('components/Page/page01/page01'); ?>
 

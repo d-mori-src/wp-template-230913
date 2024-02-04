@@ -23,6 +23,10 @@
     <script src="<?= $uri ?>/js/particles.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script> -->
     <!-- <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
+
+    <!-- swiper -->
+    <script src="<?= $uri ?>/js/swiper-bundle.min.js"></script>
+    <script src="<?= $uri ?>/js/swiper.js"></script>
   <?php wp_footer(); ?>
   </body>
 </html>

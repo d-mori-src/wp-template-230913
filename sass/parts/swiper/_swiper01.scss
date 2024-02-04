@@ -1,0 +1,58 @@
+.swiper01 {
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    position: relative;
+    .swiper-wrapper {
+        .swiper-slide {
+            width: 100% !important;
+            height: 80vh;
+            position: relative;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    // ページネーション
+    .swiper-pagination {
+        display: flex;
+
+        // 縦ページネーション
+        // flex-direction: column;
+        // gap: 16px 0;
+        // width: auto !important;
+        // position: absolute;
+        // top: 50%;
+        // left: auto !important;
+        // right: 40px;
+        // bottom: auto !important;
+        // transform: translateY(-50%);
+
+        // 横ページネーション
+        gap: 0 16px;
+        width: auto !important;
+        position: absolute;
+        top: auto;
+        left: 50% !important;
+        right: auto;
+        bottom: 40px !important;
+        transform: translateX(-50%);
+        
+        .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            margin: 0 !important;
+            background: #fff;
+        }
+        .swiper-pagination-bullet-active {
+            background: #ff6f00;
+        }
+    }
+
+    // fadeの場合、透過を無効にする
+    .swiper-slide.swiper-slide-visible.swiper-slide-next {
+        opacity: 0 !important;
+    }
+}

@@ -5,7 +5,7 @@
 
 <?php get_header(); ?>
 
-<?php get_template_part('components/parts/splash/splash01'); ?>
+<?php // get_template_part('components/parts/splash/splash01'); ?>
 
 <!-- Page mainクラス込み -->
 <?php // get_template_part('components/Page/page01/page01'); ?>
@@ -22,6 +22,8 @@
     <?php // get_template_part('components/parts/gallery/gallery01'); ?>
     <?php //get_template_part('components/parts/acordion/acordion01'); ?>
     <?php // get_template_part('components/parts/sticky/sticky01'); ?>
+    <?php // get_template_part('components/parts/swiper/swiper01'); ?>
+    <?php get_template_part('components/parts/swiper/swiper02'); ?>
 
     <!-- sass練習用(保留) -->
     <!-- <div class="box boxA">トップページが入ります。</div>

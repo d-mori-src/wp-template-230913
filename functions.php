@@ -41,6 +41,18 @@ function is_production_environment() {
 	return strpos(get_site_url(), 'https//www.example.co.jp') !== false; // 本番環境のURLを指定
 }
 
+// 分割したファイルパスを配列に追加
+$function_files = [
+	'/lib/breadcrumb.php',
+];
+foreach ($function_files as $file) {
+	if ((file_exists(__DIR__ . $file))) {
+	locate_template($file, true, true);
+	} else {
+	trigger_error("`$file`ファイルが見つかりません", E_USER_ERROR);
+	}
+}
+
 // プラグイン「CPTUI」で作成する場合は不要
 // カスタム投稿タイプの追加
 // add_action( 'init', 'create_post_type' );

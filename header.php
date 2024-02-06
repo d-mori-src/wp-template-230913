@@ -100,6 +100,9 @@
         <?php endif;?>
 
         <div class="container">
+            <?php if(!(is_home() || is_front_page())): ?>
+                <?php breadcrumb(); ?>
+            <?php endif; ?>
             <!-- 使いたいヘッダーパターンを適宜読み込み -->
             <?php // get_template_part('components/Layout/header/header05'); ?>
             <?php // get_template_part('components/parts/drawer/drawer04'); ?>

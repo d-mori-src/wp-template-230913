@@ -35,4 +35,6 @@
 @use "sass/page/page01";
 
 // 各種Mainページ
-// cssディレクトリで読み込み
+@use "./sass/page/top";
+@use "./sass/page/post";
+@use "./sass/page/contact";

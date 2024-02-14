@@ -3106,3 +3106,378 @@ img {
     width: 90%;
     object-fit: cover;
 }
+
+.top {
+    margin: 90px auto;
+}
+@media screen and (max-width: 767px) {
+    .top {
+        margin: 58px auto;
+    }
+}
+
+.post {
+    margin: 90px auto;
+}
+@media screen and (max-width: 767px) {
+    .post {
+        margin: 58px auto;
+    }
+}
+
+.contact {
+    margin: 90px auto;
+}
+@media screen and (max-width: 767px) {
+    .contact {
+        margin: 58px auto;
+    }
+}
+.contact .intro {
+    width: calc(100% - 40px);
+    margin: 0 auto 100px;
+}
+@media screen and (max-width: 767px) {
+    .contact .intro {
+        margin: 0 auto 40px;
+    }
+}
+.contact .intro ul {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 80px 0;
+}
+@media screen and (max-width: 767px) {
+    .contact .intro ul {
+        margin: 0 0 40px 0;
+    }
+}
+.contact .intro ul li .icon {
+    font-family: "Poppins", sans-serif;
+    color: #BFBFBF;
+    margin: 0 0 13px 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background: #F1F2F6;
+}
+@media screen and (max-width: 767px) {
+    .contact .intro ul li .icon {
+        padding: 16px;
+    }
+}
+.contact .intro ul li .text {
+    text-align: center;
+    font-size: 12px;
+    color: #2F253F;
+}
+@media screen and (max-width: 767px) {
+    .contact .intro ul li .text {
+        font-size: 11px;
+    }
+}
+.contact .intro ul li.border {
+    width: 110px;
+    bottom: 48px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+@media screen and (max-width: 767px) {
+    .contact .intro ul li.border {
+        width: 80px;
+        bottom: 41px;
+    }
+}
+.contact .intro ul li.active .icon {
+    color: #fff;
+    background: #D1001B;
+}
+.contact .intro ul li.active .text {
+    font-weight: bold;
+    color: #D1001B;
+}
+.contact .intro h2 {
+    text-align: center;
+    font-size: 20px;
+    margin: 0 0 20px 0;
+}
+.contact .intro p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.7;
+}
+@media screen and (max-width: 767px) {
+    .contact .intro p {
+        font-size: 12px;
+    }
+}
+.contact .form {
+    width: 1000px;
+    margin: 0 auto 136px;
+}
+@media screen and (min-width: 768px) and (max-width: 999px) {
+    .contact .form {
+        width: calc(100% - 80px);
+    }
+}
+@media screen and (max-width: 767px) {
+    .contact .form {
+        width: calc(100% - 40px);
+        margin: 0 auto 120px;
+    }
+}
+.contact .form form .formSet {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 0 26px 0;
+    padding: 0 0 26px 0;
+    border-bottom: 1px solid #ccc;
+}
+@media screen and (min-width: 768px) and (max-width: 999px) {
+    .contact .form form .formSet {
+        width: calc(100% - 80px);
+    }
+}
+@media screen and (max-width: 767px) {
+    .contact .form form .formSet {
+        display: block;
+        margin: 0 0 20px 0;
+        padding: 0 0 20px 0;
+    }
+}
+.contact .form form .formSet input, .contact .form form .formSet textarea, .contact .form form .formSet select {
+    appearance: none;
+}
+.contact .form form .formSet select::-ms-expand {
+    display: none;
+}
+.contact .form form .formSet .label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    width: 270px;
+    margin: 0;
+    position: relative;
+    top: 12px;
+}
+@media screen and (max-width: 767px) {
+    .contact .form form .formSet .label {
+        display: block;
+        font-size: 14px;
+        margin: 0 0 30px 0;
+    }
+}
+.contact .form form .formSet .label span {
+    text-align: center;
+    font-size: 14px;
+    width: 70px;
+    height: 30px;
+    margin: 0;
+    padding: 8px;
+    color: #fff;
+    border-radius: 30px;
+    background: #E63842;
+}
+@media screen and (max-width: 767px) {
+    .contact .form form .formSet .label span {
+        font-size: 12px;
+        font-weight: 500;
+        margin: 0 0 0 20px;
+        padding: 4px 10px;
+    }
+}
+.contact .form form .formSet .label .any {
+    background: #2F253F;
+}
+.contact .form form .formSet .no-relative {
+    top: 0;
+}
+.contact .form form .formSet .inputWrap {
+    width: 670px;
+}
+@media screen and (max-width: 767px) {
+    .contact .form form .formSet .inputWrap {
+        width: 100%;
+    }
+}
+.contact .form form .formSet .inputWrap .input,
+.contact .form form .formSet .inputWrap .textarea,
+.contact .form form .formSet .inputWrap select {
+    font-size: 16px;
+    padding: 16px 32px;
+    line-height: 1.4;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background: #F1F2F6;
+}
+@media screen and (max-width: 767px) {
+    .contact .form form .formSet .inputWrap .input,
+    .contact .form form .formSet .inputWrap .textarea,
+    .contact .form form .formSet .inputWrap select {
+        font-size: 12px;
+        padding: 16px;
+    }
+}
+.contact .form form .formSet .inputWrap .textarea {
+    height: 120px;
+    resize: vertical;
+}
+@media screen and (max-width: 767px) {
+    .contact .form form .formSet .inputWrap .textarea {
+        height: 250px;
+    }
+}
+.contact .form form .formSet .inputWrap .error {
+    margin: 20px 0 0 0;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #E63842;
+}
+@media screen and (max-width: 767px) {
+    .contact .form form .formSet .inputWrap .error {
+        font-size: 12px;
+        margin: 10px 0 0 0;
+    }
+}
+.contact .form form .formSet .inputWrap .radioItemWrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 32px;
+    position: relative;
+    top: 6px;
+}
+@media screen and (max-width: 767px) {
+    .contact .form form .formSet .inputWrap .radioItemWrap {
+        flex-direction: column;
+        gap: 16px 0;
+        top: 0;
+    }
+}
+.contact .form form .formSet .inputWrap .radioItemWrap .radioItem label {
+    font-size: 16px;
+    color: #777;
+    cursor: pointer;
+    padding: 0 0 0 32px;
+    position: relative;
+}
+@media screen and (max-width: 767px) {
+    .contact .form form .formSet .inputWrap .radioItemWrap .radioItem label {
+        font-size: 12px;
+        padding: 0 0 0 20px;
+    }
+}
+.contact .form form .formSet .inputWrap .radioItemWrap .radioItem label::before,
+.contact .form form .formSet .inputWrap .radioItemWrap .radioItem label::after {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+.contact .form form .formSet .inputWrap .radioItemWrap .radioItem label::before {
+    width: 30px;
+    height: 30px;
+    background: #F1F2F6;
+}
+@media screen and (max-width: 767px) {
+    .contact .form form .formSet .inputWrap .radioItemWrap .radioItem label::before {
+        width: 20px;
+        height: 20px;
+    }
+}
+.contact .form form .formSet .inputWrap .radioItemWrap .radioItem label::after {
+    width: 10px;
+    height: 10px;
+    left: 5px;
+    background: #2F253F;
+    opacity: 0;
+}
+@media screen and (max-width: 767px) {
+    .contact .form form .formSet .inputWrap .radioItemWrap .radioItem label::after {
+        width: 6px;
+        height: 6px;
+        left: 2px;
+    }
+}
+.contact .form form .formSet .inputWrap .radioItemWrap .radioItem input:checked + label::after {
+    opacity: 1;
+}
+.contact .form form .formSet .inputWrap select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 260px;
+    margin: 0 0 20px 0;
+    border: none;
+    position: relative;
+    background: #F1F2F6 url(../img/contact/select-arrow.svg) no-repeat right 24px center/8px auto;
+}
+@media screen and (max-width: 767px) {
+    .contact .form form .formSet .inputWrap select {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+}
+.contact .form form .lastFormSet {
+    margin: 0 0 80px 0;
+    padding: 0;
+    border-bottom: none;
+}
+@media screen and (max-width: 767px) {
+    .contact .form form .lastFormSet {
+        margin: 0 0 40px 0;
+    }
+}
+.contact .form form button {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    width: 450px;
+    color: #fff;
+    margin: 0 auto 30px;
+    padding: 32px;
+    border: 2px solid #E63842;
+    border-radius: 60px;
+    background: #E63842;
+    transition: 0.5s;
+    position: relative;
+}
+@media screen and (max-width: 767px) {
+    .contact .form form button {
+        width: 100%;
+        margin: 0 0 20px 0;
+        padding: 24px;
+    }
+}
+.contact .form form button span {
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    transform: translateY(-50%);
+}
+.contact .form form button span svg {
+    fill: #fff;
+}
+@media screen and (max-width: 767px) {
+    .contact .form form button span {
+        right: 24px;
+    }
+}
+.contact .form form button:hover {
+    color: #E63842;
+    background: #fff;
+}
+.contact .form .privacy {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 12px;
+    cursor: pointer;
+}

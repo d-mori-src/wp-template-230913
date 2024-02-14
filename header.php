@@ -44,14 +44,12 @@
         <meta property="og:title" content="Top">
         <meta name="description" content="This is top page">
         <meta property="og:description" content="This is top page" />
-        <link rel="stylesheet" href="<?php echo $uri ?>/css/top.min.css?<?php echo date('YmdHis'); ?>">
     <?php endif;?>
     <?php if ($server_uri === '/post/'): ?>
         <title>Post</title>
         <meta property="og:title" content="Post">
         <meta name="description" content="This is post page">
         <meta property="og:description" content="This is post page" />
-        <link rel="stylesheet" href="<?php echo $uri ?>/css/post.min.css?<?php echo date('YmdHis'); ?>">
     <?php endif;?>
     <?php if (is_singular('post')): ?>
         <title>Post | <?php the_title_attribute(); ?></title>
@@ -64,7 +62,6 @@
         ?>
         <meta name="description" content="<?php echo esc_attr($content); ?>">
         <meta property="og:description" content="<?php echo esc_attr($content); ?>" />
-        <link rel="stylesheet" href="<?php echo $uri ?>/css/post.min.css?<?php echo date('YmdHis'); ?>">
     <?php endif; ?>
     <?php if (
         $server_uri === '/contact/' || 
@@ -75,7 +72,6 @@
         <meta property="og:title" content="Contact">
         <meta name="description" content="This is contact page">
         <meta property="og:description" content="This is contact page" />
-        <link rel="stylesheet" href="<?php echo $uri ?>/css/contact.min.css?<?php echo date('YmdHis'); ?>">
     <?php endif;?>
 
     <!-- Lightbox -->

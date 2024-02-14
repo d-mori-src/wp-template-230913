@@ -1,8 +1,0 @@
-.post {
-    margin: 90px auto;
-}
-@media screen and (max-width: 767px) {
-    .post {
-        margin: 58px auto;
-    }
-}

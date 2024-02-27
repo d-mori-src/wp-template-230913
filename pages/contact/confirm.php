@@ -15,6 +15,9 @@
             <li class=""><div class="icon"></div><div class="text">完了<div></li>
         </ul>
     </section>
+    <section class="form">
+        <?php echo do_shortcode('[mwform_formkey key="25"]'); ?>
+    </section>   
 </main>
 
 <?php get_footer(); ?>

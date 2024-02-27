@@ -7,7 +7,7 @@ $(function() {
     smoothScrollFunc();
 
     // 都道府県を出力する
-    prefecturesFunc();
+    // prefecturesFunc();
 
     // footer01 sitemap more btn
     $('.sitemapMore').on('click', function() {

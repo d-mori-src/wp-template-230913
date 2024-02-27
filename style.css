@@ -3230,8 +3230,9 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 0 20px;
     margin: 0 0 26px 0;
-    padding: 0 0 26px 0;
+    padding: 0 40px 26px;
     border-bottom: 1px solid #ccc;
 }
 @media screen and (min-width: 768px) and (max-width: 999px) {
@@ -3259,10 +3260,8 @@ img {
     font-size: 16px;
     font-weight: bold;
     line-height: 1;
-    width: 270px;
+    width: 240px;
     margin: 0;
-    position: relative;
-    top: 12px;
 }
 @media screen and (max-width: 767px) {
     .contact .form form .formSet .label {
@@ -3273,21 +3272,16 @@ img {
 }
 .contact .form form .formSet .label span {
     text-align: center;
-    font-size: 14px;
-    width: 70px;
-    height: 30px;
+    font-size: 11px;
     margin: 0;
-    padding: 8px;
+    padding: 6px;
     color: #fff;
-    border-radius: 30px;
     background: #E63842;
 }
 @media screen and (max-width: 767px) {
     .contact .form form .formSet .label span {
-        font-size: 12px;
-        font-weight: 500;
         margin: 0 0 0 20px;
-        padding: 4px 10px;
+        padding: 2px 4px 3px;
     }
 }
 .contact .form form .formSet .label .any {
@@ -3297,7 +3291,7 @@ img {
     top: 0;
 }
 .contact .form form .formSet .inputWrap {
-    width: 670px;
+    width: 640px;
 }
 @media screen and (max-width: 767px) {
     .contact .form form .formSet .inputWrap {
@@ -3325,12 +3319,12 @@ img {
     }
 }
 .contact .form form .formSet .inputWrap .textarea {
-    height: 120px;
+    height: 240px;
     resize: vertical;
 }
 @media screen and (max-width: 767px) {
     .contact .form form .formSet .inputWrap .textarea {
-        height: 250px;
+        height: 360px;
     }
 }
 .contact .form form .formSet .inputWrap .error {
@@ -3349,66 +3343,41 @@ img {
 .contact .form form .formSet .inputWrap .radioItemWrap {
     display: flex;
     flex-wrap: wrap;
-    gap: 0 32px;
-    position: relative;
-    top: 6px;
+    gap: 0 40px;
 }
 @media screen and (max-width: 767px) {
     .contact .form form .formSet .inputWrap .radioItemWrap {
         flex-direction: column;
-        gap: 16px 0;
+        gap: 10px 0;
         top: 0;
     }
 }
-.contact .form form .formSet .inputWrap .radioItemWrap .radioItem label {
-    font-size: 16px;
-    color: #777;
-    cursor: pointer;
-    padding: 0 0 0 32px;
+.contact .form form .formSet .inputWrap .radioItemWrap .mwform-radio-field .mwform-radio-field-text {
+    display: flex;
+    gap: 0 12px;
+}
+.contact .form form .formSet .inputWrap .radioItemWrap .horizontal-item + .horizontal-item {
+    margin-left: 0;
+}
+.contact .form form .formSet .inputWrap .radioItemWrap label {
     position: relative;
+    cursor: pointer;
+    font-size: 16px;
 }
-@media screen and (max-width: 767px) {
-    .contact .form form .formSet .inputWrap .radioItemWrap .radioItem label {
-        font-size: 12px;
-        padding: 0 0 0 20px;
-    }
+.contact .form form .formSet .inputWrap .radioItemWrap input[type=radio],
+.contact .form form .formSet .inputWrap .radioItemWrap input[type=checkbox] {
+    display: none;
 }
-.contact .form form .formSet .inputWrap .radioItemWrap .radioItem label::before,
-.contact .form form .formSet .inputWrap .radioItemWrap .radioItem label::after {
+.contact .form form .formSet .inputWrap .radioItemWrap input[type=radio] + .mwform-radio-field-text::before {
     content: "";
-    display: block;
-    border-radius: 50%;
-    position: absolute;
-    transform: translateY(-50%);
-    top: 50%;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #333;
+    position: relative;
+    top: 2px;
 }
-.contact .form form .formSet .inputWrap .radioItemWrap .radioItem label::before {
-    width: 30px;
-    height: 30px;
-    background: #F1F2F6;
-}
-@media screen and (max-width: 767px) {
-    .contact .form form .formSet .inputWrap .radioItemWrap .radioItem label::before {
-        width: 20px;
-        height: 20px;
-    }
-}
-.contact .form form .formSet .inputWrap .radioItemWrap .radioItem label::after {
-    width: 10px;
-    height: 10px;
-    left: 5px;
-    background: #2F253F;
-    opacity: 0;
-}
-@media screen and (max-width: 767px) {
-    .contact .form form .formSet .inputWrap .radioItemWrap .radioItem label::after {
-        width: 6px;
-        height: 6px;
-        left: 2px;
-    }
-}
-.contact .form form .formSet .inputWrap .radioItemWrap .radioItem input:checked + label::after {
-    opacity: 1;
+.contact .form form .formSet .inputWrap .radioItemWrap input[type=radio]:checked + .mwform-radio-field-text::before {
+    background: #333;
 }
 .contact .form form .formSet .inputWrap select {
     appearance: none;
@@ -3418,22 +3387,12 @@ img {
     margin: 0 0 20px 0;
     border: none;
     position: relative;
-    background: #F1F2F6 url(../img/contact/select-arrow.svg) no-repeat right 24px center/8px auto;
+    background: #F1F2F6 url(./img/contact/select-arrow.svg) no-repeat right 24px center/14px auto;
 }
 @media screen and (max-width: 767px) {
     .contact .form form .formSet .inputWrap select {
         width: 100%;
         margin: 0 0 10px 0;
-    }
-}
-.contact .form form .lastFormSet {
-    margin: 0 0 80px 0;
-    padding: 0;
-    border-bottom: none;
-}
-@media screen and (max-width: 767px) {
-    .contact .form form .lastFormSet {
-        margin: 0 0 40px 0;
     }
 }
 .contact .form form button {
@@ -3442,10 +3401,9 @@ img {
     font-weight: bold;
     width: 450px;
     color: #fff;
-    margin: 0 auto 30px;
+    margin: 80px auto 0;
     padding: 32px;
     border: 2px solid #E63842;
-    border-radius: 60px;
     background: #E63842;
     transition: 0.5s;
     position: relative;
@@ -3453,7 +3411,7 @@ img {
 @media screen and (max-width: 767px) {
     .contact .form form button {
         width: 100%;
-        margin: 0 0 20px 0;
+        margin: 40px auto 0;
         padding: 24px;
     }
 }
@@ -3475,9 +3433,85 @@ img {
     color: #E63842;
     background: #fff;
 }
+.contact .form form button:hover span svg {
+    fill: #E63842;
+}
+.contact .form form .backBtn {
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+    margin: 40px auto 0;
+    padding: 0 16px 8px;
+    border: none;
+    border-bottom: 1px solid #666;
+    background: none;
+}
 .contact .form .privacy {
     text-align: center;
     text-decoration: underline;
     font-size: 12px;
     cursor: pointer;
+}
+.contact .complete {
+    text-align: center;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+}
+.contact .complete h2 {
+    font-size: 24px;
+    margin: 0 0 40px 0;
+}
+.contact .complete h2 span {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #E63842;
+    margin: 10px 0 0 0;
+}
+.contact .complete p {
+    text-align: 16px;
+    line-height: 2;
+    margin: 0 0 40px 0;
+}
+.contact .complete a {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    width: 450px;
+    color: #fff;
+    margin: 80px auto 0;
+    padding: 32px;
+    border: 2px solid #E63842;
+    background: #E63842;
+    transition: 0.5s;
+    position: relative;
+}
+@media screen and (max-width: 767px) {
+    .contact .complete a {
+        width: 100%;
+        margin: 40px auto 0;
+        padding: 24px;
+    }
+}
+.contact .complete a span {
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    transform: translateY(-50%);
+}
+.contact .complete a span svg {
+    fill: #fff;
+}
+@media screen and (max-width: 767px) {
+    .contact .complete a span {
+        right: 24px;
+    }
+}
+.contact .complete a:hover {
+    color: #E63842;
+    background: #fff;
+}
+.contact .complete a:hover span svg {
+    fill: #E63842;
 }

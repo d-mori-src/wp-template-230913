@@ -53,6 +53,18 @@ foreach ($function_files as $file) {
 	}
 }
 
+// wp mw form pタグ brタグ自動挿入解除
+function mvwpform_autop_filter() {
+	if (class_exists('MW_WP_Form_Admin')) {
+		$mw_wp_form_admin = new MW_WP_Form_Admin();
+		$forms = $mw_wp_form_admin->get_forms();
+		foreach ($forms as $form) {
+			add_filter('mwform_content_wpautop_mw-wp-form-' . $form->ID, '__return_false');
+		}
+	}
+}
+mvwpform_autop_filter();
+
 // プラグイン「CPTUI」で作成する場合は不要
 // カスタム投稿タイプの追加
 // add_action( 'init', 'create_post_type' );

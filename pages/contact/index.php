@@ -25,7 +25,8 @@
     </section>
 
     <section class="form">
-        <form action="" method="post">
+        <?php echo do_shortcode('[mwform_formkey key="25"]'); ?>
+        <!-- <form action="" method="post">
             <div class="formSet">
                 <div class="label">お名前<span>必 須</span></div>
                 <div class="inputWrap">
@@ -78,7 +79,7 @@
                 </div>
             </div>
             
-            <div class="formSet lastFormSet">
+            <div class="formSet">
                 <div class="label">お問い合わせ<span class="any">任 意</span></div>
                 <div class="inputWrap">
                     <textarea class="textarea" name="inquiry" placeholder="お問い合わせ"></textarea>
@@ -89,7 +90,7 @@
                 入力内容を確認する
                 <span><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></span>
             </button>
-        </form>
+        </form> -->
     </section>
 </main>
 

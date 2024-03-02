@@ -1890,6 +1890,44 @@ img {
     gap: 0 40px;
 }
 
+.mega02 {
+    display: flex;
+    justify-content: center;
+    gap: 0 40px;
+}
+.mega02 li {
+    font-size: 16px;
+    position: relative;
+}
+.mega02 li:hover a {
+    color: #a50000;
+}
+.mega02 li:hover .dropdownLists {
+    display: block;
+}
+.mega02 li .dropdownLists {
+    display: none;
+    width: 100%;
+    position: absolute;
+    width: 320px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.mega02 li .dropdownLists .dropdownList {
+    text-align: center;
+}
+.mega02 li .dropdownLists .dropdownList a {
+    display: block;
+    color: #fff;
+    padding: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    background: #a50000;
+    transition: 0.5s;
+}
+.mega02 li .dropdownLists .dropdownList a:hover {
+    background: #510000;
+}
+
 .card01 {
     display: grid;
     gap: 60px 30px;

@@ -15,11 +15,11 @@
     <link rel="canonical" href="<?=$site_url?>">
     <meta property="og:type" content="website">
     <meta property="og:url" content="<?=$site_url?>">
-    <meta property="og:image" content="<?= $uri ?>/meta/ogp.jpg">
+    <!-- <meta property="og:image" content="<?php // echo $uri ?>/meta/ogp.jpg"> -->
     <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
     <meta name="theme-color" content="">
-    <link rel="apple-touch-icon" href="<?= $uri ?>/meta/icon.png">
-    <link rel="shortcut icon" href="<?= $uri ?>/meta/favicon.ico">
+    <!-- <link rel="apple-touch-icon" href="<?php // echo $uri ?>/meta/icon.png"> -->
+    <!-- <link rel="shortcut icon" href="<?php // echo $uri ?>/meta/favicon.ico"> -->
 
     <link rel="stylesheet" href="<?php echo $uri ?>/js/swiper-bundle.min.css">
     <script type="text/javascript" src="<?php echo $uri ?>/js/swiper-bundle.min.js"></script>
@@ -100,5 +100,5 @@
                 <?php // breadcrumb(); ?>
             <?php // endif; ?>
             <!-- 使いたいヘッダーパターンを適宜読み込み -->
-            <?php // get_template_part('components/Layout/header/header05'); ?>
-            <?php // get_template_part('components/parts/drawer/drawer04'); ?>
+            <?php get_template_part('components/Layout/header/header06'); ?>
+            <?php get_template_part('components/parts/drawer/drawer05'); ?>

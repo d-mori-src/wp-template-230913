@@ -1,0 +1,136 @@
+@use "../../utils/utils" as *;
+
+.drawer05 {
+    #sidebarMenu {
+        height: 100%;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        position: fixed;
+        top: 69px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        transform: translateX(768px);
+        transition: transform 250ms ease-in-out;
+        background: $white-color;
+        z-index: 1000;
+        padding: 40px 20px;
+        .naviWrap {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 0 40px 0;
+            .navi {
+                display: flex;
+                flex-direction: column;
+                gap: 30px 0;
+                li {
+                    font-size: 13px;
+                    font-weight: bold;
+                    width: 100%;
+                    a {
+                        color: $base-color;
+                    }
+                }
+            }
+        }
+        .sidebarMenuContactBtn {
+            display: block;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            color: #fff;
+            width: 100%;
+            margin: 0 0 80px 0;
+            padding: 24px;
+            background: #1C8094;
+        }
+    }
+    input[type="checkbox"]:checked ~ #sidebarMenu {
+        transform: translateX(0);
+    }
+    .openSidebarMenu {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        display: none;
+    }
+    .sidebarIconToggle {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        cursor: pointer;
+        position: fixed;
+        z-index: 1001;
+        padding: 6px 0 0;
+        top: 20px;
+        right: 20px;
+        height: 24px;
+        width: 24px;
+        &::before {
+            content: "";
+            background: #0F5198;
+            width: 64px;
+            height: 69px;
+            display: block;
+            position: absolute;
+            top: -20px;
+            left: -20px;
+        }
+    }
+    .spinner {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background-color: $white-color;
+    }
+    .horizontal {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+        margin-top: 5px;
+    }
+    .diagonal.part-1 {
+        position: relative;
+        transition: all 0.3s;
+        box-sizing: border-box;
+        float: left;
+    }
+    .diagonal.part-2 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: relative;
+        float: right;
+        margin-top: 5px;
+        // width: 18px; // 幅調整
+    }
+    input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        opacity: 0;
+    }
+    input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        transform: rotate(135deg);
+        margin-top: 8px;
+    }
+    input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        transform: rotate(-135deg);
+        margin-top: -9px;
+        width: 100%;
+    }
+    
+    // PC時は表示しない
+    @include mq(pc) {
+        #sidebarMenu,
+        .spinner,
+        .sidebarIconToggle {
+            display: none;
+        }
+    }
+}

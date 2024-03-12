@@ -820,6 +820,126 @@ img {
     color: #ba0c0c;
 }
 
+.header06 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.header06 .innerHeader {
+    font-size: 12px;
+    font-weight: bold;
+    width: calc(100% - 100px);
+    margin: 0 auto;
+    padding: 30px 0 20px;
+}
+@media screen and (max-width: 767px) {
+    .header06 .innerHeader {
+        width: calc(100% - 20px);
+        margin: 0 0 0 auto;
+        padding: 0 63px 0 0;
+    }
+}
+.header06 .innerHeader .upper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@media screen and (max-width: 1299px) {
+    .header06 .innerHeader .upper {
+        margin: 0 0 20px 0;
+        padding: 0 0 20px 0;
+        border-bottom: 1px solid #ccc;
+    }
+}
+@media screen and (max-width: 767px) {
+    .header06 .innerHeader .upper {
+        margin: 0;
+        padding: 0;
+        border-bottom: none;
+    }
+}
+.header06 .innerHeader .upper .left {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+}
+@media screen and (max-width: 767px) {
+    .header06 .innerHeader .upper .left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px 0;
+    }
+}
+.header06 .innerHeader .upper .left .logo {
+    width: auto;
+    height: 40px;
+}
+@media screen and (max-width: 767px) {
+    .header06 .innerHeader .upper .left .logo {
+        height: 28px;
+    }
+}
+@media screen and (max-width: 1299px) {
+    .header06 .innerHeader .upper .center {
+        display: none;
+    }
+}
+.header06 .innerHeader .upper .right .pc-headContactBtn {
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: calc(infinity * 1px);
+    background: #1C8094;
+    transition: 0.5s;
+}
+.header06 .innerHeader .upper .right .pc-headContactBtn:hover {
+    background: #0F5198;
+}
+@media screen and (max-width: 767px) {
+    .header06 .innerHeader .upper .right .pc-headContactBtn {
+        display: none;
+    }
+}
+.header06 .innerHeader .upper .right .sp-headContactBtn {
+    display: none;
+}
+@media screen and (max-width: 767px) {
+    .header06 .innerHeader .upper .right .sp-headContactBtn {
+        display: block;
+    }
+    .header06 .innerHeader .upper .right .sp-headContactBtn img {
+        height: 69px;
+    }
+}
+.header06 .innerHeader .lower {
+    display: none;
+}
+@media screen and (max-width: 1299px) {
+    .header06 .innerHeader .lower {
+        display: block;
+    }
+}
+@media screen and (max-width: 767px) {
+    .header06 .innerHeader .lower {
+        display: none;
+    }
+}
+.header06 .navi {
+    display: flex;
+    justify-content: center;
+    gap: 0 40px;
+}
+@media screen and (max-width: 900px) {
+    .header06 .navi {
+        gap: 0 20px;
+        font-size: 11px;
+    }
+}
+.header06 .active {
+    color: #1C8094;
+}
+
 .footer01 {
     color: #fff;
     background: #333;
@@ -1827,6 +1947,136 @@ img {
     transition: all 0.3s;
     transform: rotate(-135deg);
     margin-top: -5px;
+}
+
+.drawer05 #sidebarMenu {
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    position: fixed;
+    top: 69px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    transform: translateX(768px);
+    transition: transform 250ms ease-in-out;
+    background: #fff;
+    z-index: 1000;
+    padding: 40px 20px;
+}
+.drawer05 #sidebarMenu .naviWrap {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 40px 0;
+}
+.drawer05 #sidebarMenu .naviWrap .navi {
+    display: flex;
+    flex-direction: column;
+    gap: 30px 0;
+}
+.drawer05 #sidebarMenu .naviWrap .navi li {
+    font-size: 13px;
+    font-weight: bold;
+    width: 100%;
+}
+.drawer05 #sidebarMenu .naviWrap .navi li a {
+    color: #333;
+}
+.drawer05 #sidebarMenu .sidebarMenuContactBtn {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    width: 100%;
+    margin: 0 0 80px 0;
+    padding: 24px;
+    background: #1C8094;
+}
+.drawer05 input[type=checkbox]:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+.drawer05 .openSidebarMenu {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+.drawer05 .sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: fixed;
+    z-index: 1001;
+    padding: 6px 0 0;
+    top: 20px;
+    right: 20px;
+    height: 24px;
+    width: 24px;
+}
+.drawer05 .sidebarIconToggle::before {
+    content: "";
+    background: #0F5198;
+    width: 64px;
+    height: 69px;
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+}
+.drawer05 .spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+}
+.drawer05 .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 5px;
+}
+.drawer05 .diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+.drawer05 .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: right;
+    margin-top: 5px;
+}
+.drawer05 input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+.drawer05 input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+.drawer05 input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+    width: 100%;
+}
+@media screen and (min-width: 768px) {
+    .drawer05 #sidebarMenu,
+    .drawer05 .spinner,
+    .drawer05 .sidebarIconToggle {
+        display: none;
+    }
 }
 
 .mega01 {

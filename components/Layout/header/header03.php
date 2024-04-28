@@ -15,8 +15,8 @@
         </div>
         <ul class="center">
             <li><a href="<?=$site_url;?>" class="<?=$active = ($server_uri === '/') ? 'active' : ''; ?>">HOME</a></li>
-            <li><a href="<?=$site_url;?>/post" class="<?=$active = ($server_uri === '/post/') ? 'active' : ''; ?>">POST</a></li>
-            <li><a href="<?=$site_url;?>/contact" class="<?=$active = ($slug === 'contact') ? 'active' : ''; ?>">CONTACT</a></li>
+            <li><a href="<?=$site_url;?>/post" class="<?php echo isset($post) && $post->post_type === 'post' ? 'active' : ''; ?>">POST</a></li>
+            <li><a href="<?=$site_url;?>/contact" class="<?php echo isset($post) && $post->post_name === 'contact' ? 'active' : ''; ?>">CONTACT</a></li>
         </ul>
         <div class="right">
             <a href="" class="dashIcon"><img src="<?=$uri?>/img/header/header03/dash_icon.svg" alt=""></a>

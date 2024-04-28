@@ -3,8 +3,6 @@
     global $post;
     $slug = $post->post_name;
     $site_url = site_url(); // サイトURL
-    $server_uri = $_SERVER['REQUEST_URI'];
-    $server_uri_trimed = substr($server_uri, 0, strcspn($server_uri,'?')); 
 ?>
 
 <!DOCTYPE html>
@@ -39,18 +37,13 @@
     <link rel="stylesheet" href="<?php echo $uri ?>/style.min.css?<?php echo date('YmdHis'); ?>">
 
     <!-- 各ページ切り分け -->
-    <?php if ($server_uri === '/'): ?>
+    <?php if (is_home() || is_front_page()): ?>
         <title>Top</title>
         <meta property="og:title" content="Top">
         <meta name="description" content="This is top page">
         <meta property="og:description" content="This is top page" />
     <?php endif;?>
-    <?php if ($server_uri === '/post/'): ?>
-        <title>Post</title>
-        <meta property="og:title" content="Post">
-        <meta name="description" content="This is post page">
-        <meta property="og:description" content="This is post page" />
-    <?php endif;?>
+
     <?php if (is_singular('post')): ?>
         <title>Post | <?php the_title_attribute(); ?></title>
         <meta property="og:title" content="<?php the_title() ?>">
@@ -63,11 +56,20 @@
         <meta name="description" content="<?php echo esc_attr($content); ?>">
         <meta property="og:description" content="<?php echo esc_attr($content); ?>" />
     <?php endif; ?>
+
+    <?php if (isset($post) && $post->post_type === 'post'): ?>
+        <title>Post</title>
+        <meta property="og:title" content="Post">
+        <meta name="description" content="This is post page">
+        <meta property="og:description" content="This is post page" />
+    <?php endif;?>
+    
     <?php if (
-        $server_uri === '/contact/' || 
-        $server_uri === '/contact/confirm/' || 
-        $server_uri === '/contact/thanks/'): 
-    ?>
+        isset($post) && 
+        ($post->post_name === 'contact' || 
+        $post->post_name === 'confirm' || 
+        $post->post_name === 'complete')
+    ): ?>
         <title>Contact</title>
         <meta property="og:title" content="Contact">
         <meta name="description" content="This is contact page">
@@ -100,5 +102,5 @@
                 <?php // breadcrumb(); ?>
             <?php // endif; ?>
             <!-- 使いたいヘッダーパターンを適宜読み込み -->
-            <?php get_template_part('components/Layout/header/header06'); ?>
+            <?php get_template_part('components/Layout/header/header02'); ?>
             <?php get_template_part('components/parts/drawer/drawer05'); ?>

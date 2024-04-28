@@ -1,7 +1,5 @@
 <?php
     $uri = get_theme_file_uri(); // ルートpath
-    global $post;
-    $slug = $post->post_name;
     $site_url = site_url(); // サイトURL
     $server_uri = $_SERVER['REQUEST_URI'];
     $server_uri_trimed = substr($server_uri, 0, strcspn($server_uri,'?')); 
@@ -15,7 +13,7 @@
         </div>
         <ul class="headerMenu">
             <li><a href="<?=$site_url;?>" class="<?=$active = ($server_uri === '/') ? 'active' : ''; ?>">トップ</a></li>
-            <li><a href="<?=$site_url;?>/post" class="<?=$active = ($server_uri === '/post/') ? 'active' : ''; ?>">最新情報</a></li>
+            <li><a href="<?=$site_url;?>/post" class="<?php echo isset($post) && $post->post_type === 'post' ? 'active' : ''; ?>">最新情報</a></li>
             <li class="megaMenu">
                 <a href="">ご利用サポート</a>
                 <div class="megaMenuSecond">
@@ -56,7 +54,7 @@
                     </div>
                 </div>
             </li>
-            <li><a href="<?=$site_url;?>/contact" class="<?=$active = ($slug === 'contact') ? 'active' : ''; ?>">お問い合わせ</a></li>
+            <li><a href="<?=$site_url;?>/contact" class="<?php echo isset($post) && $post->post_name === 'contact' ? 'active' : ''; ?>">お問い合わせ</a></li>
         </ul>
         <div class="right">
             <a href="" class="btn">予約する<span>→</span></a>

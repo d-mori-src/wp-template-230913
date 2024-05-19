@@ -1,0 +1,22 @@
+.baloon02 {
+    font-size: 20px;
+    font-weight: 500;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0 30px 10px; 
+    position: relative;
+    border-bottom: 2px solid #333;
+    &::after {
+        content: "";
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 50%;
+        width: 30px;
+        height: 2px;
+        box-sizing: border-box;
+        background-color: #333;
+        box-shadow: 0 2px 0 #fff, 0 -2px 0 #fff;
+        rotate: 50deg;
+        translate: -25%;
+    }
+}

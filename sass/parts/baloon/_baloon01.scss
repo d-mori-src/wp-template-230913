@@ -1,0 +1,35 @@
+.baloon01 {
+    font-size: 20px;
+    font-weight: 500;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0 30px 10px; 
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -6px;
+        left: 50%;
+        width: 100%;
+        height: 50%;
+        box-sizing: border-box;
+        border: 2px solid #333333;
+        border-top: none;
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+        translate: -50%;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 50%;
+        width: 30px;
+        height: 2px;
+        box-sizing: border-box;
+        background-color: #333333;
+        box-shadow: 0 2px 0 #ffffff, 0 -2px 0 #ffffff;
+        rotate: 50deg;
+        translate: -50%;
+    }
+}

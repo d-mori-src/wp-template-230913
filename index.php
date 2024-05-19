@@ -7,9 +7,6 @@
 
 <?php // get_template_part('components/parts/splash/splash01'); ?>
 
-<!-- Page mainクラス込み -->
-<?php // get_template_part('components/Page/page01/page01'); ?>
-
 <main class="top">
     <?php // get_template_part('components/parts/mega/mega01'); ?>
     <?php // get_template_part('components/parts/mega/mega02'); ?>
@@ -25,12 +22,7 @@
     <?php // get_template_part('components/parts/sticky/sticky01'); ?>
     <?php // get_template_part('components/parts/swiper/swiper01'); ?>
     <?php //get_template_part('components/parts/swiper/swiper02'); ?>
-
-    <!-- sass練習用(保留) -->
-    <!-- <div class="box boxA">トップページが入ります。</div>
-    <div class="box boxB"><h2>トップページが入ります。</h2></div>
-    <div class="conditionBoxA">トップページが入ります。</div>
-    <div class="conditionBoxB">トップページが入ります。</div> -->
+    <?php get_template_part('components/parts/baloon/baloon'); ?>
 </main>
 
 <?php get_footer(); ?>

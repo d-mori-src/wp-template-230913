@@ -15,7 +15,6 @@
 @use "sass/layout/footer/footer";
 
 // 各種パーツ
-// @use "sass/parts/practice"; // 練習用
 @use "sass/parts/bottomSlidein";
 @use "sass/parts/drawer/drawer";
 @use "sass/parts/mega/mega";
@@ -29,12 +28,8 @@
 @use "sass/parts/sticky/sticky";
 @use "sass/parts/splash/splash";
 @use "sass/parts/swiper/swiper";
-@use "sass/parts/breadcrumb/breadcrumb";
-
-// ページ
-@use "sass/page/page01";
+@use "sass/parts/baloon/baloon";
 
 // 各種Mainページ
 @use "./sass/page/top";
 @use "./sass/page/post";
-@use "./sass/page/contact";

@@ -1,7 +1,6 @@
 <?php
     $uri = get_theme_file_uri(); // ルートpath
     global $post;
-    $slug = $post->post_name;
     $site_url = site_url(); // サイトURL
 ?>
 
@@ -64,17 +63,17 @@
         <meta property="og:description" content="This is post page" />
     <?php endif;?>
     
-    <?php if (
-        isset($post) && 
-        ($post->post_name === 'contact' || 
-        $post->post_name === 'confirm' || 
-        $post->post_name === 'complete')
-    ): ?>
-        <title>Contact</title>
+    <?php // if (
+        // isset($post) && 
+        // ($post->post_name === 'contact' || 
+        // $post->post_name === 'confirm' || 
+        // $post->post_name === 'thanks')
+    // ): ?>
+        <!-- <title>Contact</title>
         <meta property="og:title" content="Contact">
         <meta name="description" content="This is contact page">
-        <meta property="og:description" content="This is contact page" />
-    <?php endif;?>
+        <meta property="og:description" content="This is contact page" /> -->
+    <?php // endif;?>
 
     <!-- Lightbox -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
@@ -102,5 +101,5 @@
                 <?php // breadcrumb(); ?>
             <?php // endif; ?>
             <!-- 使いたいヘッダーパターンを適宜読み込み -->
-            <?php get_template_part('components/Layout/header/header02'); ?>
-            <?php get_template_part('components/parts/drawer/drawer05'); ?>
+            <?php get_template_part('components/Layout/header/header01'); ?>
+            <?php get_template_part('components/parts/drawer/drawer01'); ?>

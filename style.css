@@ -3271,6 +3271,70 @@ img {
     translate: -25%;
 }
 
+.notfoundPage .notfound {
+    width: calc(100% - 100px);
+    max-width: 680px;
+    margin: 160px auto 80px;
+}
+@media screen and (max-width: 767px) {
+    .notfoundPage .notfound {
+        width: calc(100% - 40px);
+        margin: 80px auto 40px;
+    }
+}
+.notfoundPage .notfound h1 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 500;
+    font-family: "Josefin Sans", sans-serif;
+    margin: 0 0 40px 0;
+}
+@media screen and (max-width: 767px) {
+    .notfoundPage .notfound h1 {
+        font-size: 32px;
+    }
+}
+.notfoundPage .notfound h1 span {
+    display: block;
+    font-size: 16px;
+    margin: 12px 0 0 0;
+}
+@media screen and (max-width: 767px) {
+    .notfoundPage .notfound h1 span {
+        font-size: 12px;
+        margin: 6px 0 0 0;
+    }
+}
+.notfoundPage .notfound ul {
+    padding: 32px 40px;
+    background: rgba(51, 51, 51, 0.1);
+}
+@media screen and (max-width: 767px) {
+    .notfoundPage .notfound ul {
+        padding: 24px;
+    }
+}
+.notfoundPage .notfound ul li {
+    display: flex;
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    margin: 0 0 8px 0;
+}
+@media screen and (max-width: 767px) {
+    .notfoundPage .notfound ul li {
+        font-size: 12px;
+        margin: 0 0 4px 0;
+    }
+}
+.notfoundPage .notfound ul li span {
+    margin: 0 4px 0 0;
+}
+.notfoundPage .notfound ul li:last-child {
+    margin: 0;
+}
+
 .top {
     margin: 90px auto;
 }
@@ -3286,5 +3350,417 @@ img {
 @media screen and (max-width: 767px) {
     .post {
         margin: 58px auto;
+    }
+}
+
+.contact {
+    text-align: center;
+}
+.contact .intro {
+    width: calc(100% - 40px);
+    margin: 0 auto 100px;
+}
+@media screen and (max-width: 767px) {
+    .contact .intro {
+        margin: 0 auto 40px;
+    }
+}
+.contact .intro ul {
+    display: flex;
+    justify-content: center;
+}
+.contact .intro ul li .icon {
+    color: #BFBFBF;
+    margin: 0 0 13px 0;
+    padding: 20px;
+    border: 1px solid rgba(51, 51, 51, 0.1);
+    border-radius: 50%;
+    background: rgba(51, 51, 51, 0.1);
+}
+@media screen and (max-width: 767px) {
+    .contact .intro ul li .icon {
+        padding: 16px;
+    }
+}
+.contact .intro ul li .text {
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+}
+@media screen and (max-width: 767px) {
+    .contact .intro ul li .text {
+        font-size: 11px;
+    }
+}
+.contact .intro ul li.border {
+    width: 110px;
+    bottom: 48px;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+    position: relative;
+}
+@media screen and (max-width: 767px) {
+    .contact .intro ul li.border {
+        width: 80px;
+        bottom: 41px;
+    }
+}
+.contact .intro ul li.active .icon {
+    color: #fff;
+    background: #75CC00;
+}
+.contact .intro ul li.active .text {
+    color: #75CC00;
+}
+.contact form {
+    width: calc(100% - 100px);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+    .contact form {
+        width: calc(100% - 40px);
+    }
+}
+.contact form .formWrap {
+    margin: 0 0 80px 0;
+}
+@media screen and (max-width: 767px) {
+    .contact form .formWrap {
+        margin: 0 0 40px 0;
+    }
+}
+.contact form .formWrap .formSet {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin: 0 0 20px 0;
+    padding: 0 40px 20px;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+}
+@media screen and (max-width: 767px) {
+    .contact form .formWrap .formSet {
+        flex-direction: column;
+        gap: 10px 0;
+        padding: 0 0 20px;
+    }
+}
+.contact form .formWrap .formSet:first-child {
+    padding: 20px 40px;
+    border-top: 1px solid rgba(51, 51, 51, 0.1);
+}
+@media screen and (max-width: 767px) {
+    .contact form .formWrap .formSet:first-child {
+        padding: 20px 0;
+    }
+}
+.contact form .formWrap .formSet:last-child {
+    margin: 0;
+}
+.contact form .formWrap .formSet .label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    width: 28%;
+}
+@media screen and (max-width: 767px) {
+    .contact form .formWrap .formSet .label {
+        justify-content: flex-start;
+        gap: 0 20px;
+        width: 100%;
+    }
+}
+.contact form .formWrap .formSet .label span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    padding: 6px 12px 7px;
+    border-radius: calc(infinity * 1px);
+    background: #e31c1c;
+}
+@media screen and (max-width: 767px) {
+    .contact form .formWrap .formSet .label span {
+        font-size: 12px;
+        padding: 4px 10px 5px;
+    }
+}
+.contact form .formWrap .formSet .inputWrap {
+    width: 68%;
+}
+@media screen and (max-width: 767px) {
+    .contact form .formWrap .formSet .inputWrap {
+        width: 100%;
+    }
+}
+.contact form .formWrap .formSet .inputWrap .wpcf7-form-control-wrap input,
+.contact form .formWrap .formSet .inputWrap .wpcf7-form-control-wrap select,
+.contact form .formWrap .formSet .inputWrap .wpcf7-form-control-wrap textarea {
+    font-size: 16px;
+    line-height: 1.4;
+    width: 100%;
+    padding: 20px 30px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: rgba(51, 51, 51, 0.1);
+}
+@media screen and (max-width: 767px) {
+    .contact form .formWrap .formSet .inputWrap .wpcf7-form-control-wrap input,
+    .contact form .formWrap .formSet .inputWrap .wpcf7-form-control-wrap select,
+    .contact form .formWrap .formSet .inputWrap .wpcf7-form-control-wrap textarea {
+        font-size: 12px;
+        padding: 16px 18px;
+    }
+}
+.contact form .formWrap .formSet .inputWrap .wpcf7-form-control-wrap textarea {
+    resize: vertical;
+    height: 290px;
+}
+@media screen and (max-width: 767px) {
+    .contact form .formWrap .formSet .inputWrap .wpcf7-form-control-wrap textarea {
+        height: 335px;
+    }
+}
+.contact form .formWrap .formSet .inputWrap .wpcf7-form-control-wrap .wpcf7-form-control {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+}
+.contact form .formWrap .formSet .inputWrap .count li {
+    display: flex;
+    gap: 0 5px;
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+    color: rgba(51, 51, 51, 0.5);
+    margin: 5px 0 0 0;
+}
+.contact form .formWrap .formSet .inputWrap .count li .wpcf7-character-count {
+    display: block;
+}
+.contact form .formWrap .formSet .inputWrap .count li .wpcf7-character-count::after {
+    content: "文字";
+}
+.contact form .formWrap .formSet .selectWrap {
+    position: relative;
+}
+.contact form .formWrap .formSet .selectWrap::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid;
+    border-color: transparent transparent rgba(51, 51, 51, 0.5) rgba(51, 51, 51, 0.5);
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%) rotate(-45deg);
+    pointer-events: none;
+}
+@media screen and (max-width: 767px) {
+    .contact form .formWrap .formSet .selectWrap::after {
+        width: 5px;
+        height: 5px;
+        right: 18px;
+    }
+}
+.contact form .formWrap .textareaSet {
+    align-items: flex-start;
+}
+.contact form .agree {
+    font-size: 16px;
+    margin: 0 0 80px 0;
+}
+@media screen and (max-width: 767px) {
+    .contact form .agree {
+        font-size: 14px;
+        margin: 0 0 40px 0;
+    }
+}
+.contact form .agree .privacy-policy {
+    width: 100%;
+    margin: 0 auto 40px;
+    padding: 60px;
+    border: 1px solid #333;
+}
+@media screen and (max-width: 767px) {
+    .contact form .agree .privacy-policy {
+        padding: 40px 30px;
+    }
+}
+.contact form .agree .privacy-policy h3 {
+    font-size: 18px;
+    margin: 0 0 24px 0;
+}
+@media screen and (max-width: 767px) {
+    .contact form .agree .privacy-policy h3 {
+        text-align: left;
+        font-size: 16px;
+        margin: 0 0 16px 0;
+    }
+}
+.contact form .agree .privacy-policy p {
+    text-align: justify;
+    font-size: 14px;
+    line-height: 2;
+}
+@media screen and (max-width: 767px) {
+    .contact form .agree .privacy-policy p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+}
+.contact form .agree .checkbox-cl01 input {
+    display: none;
+}
+.contact form .agree .checkbox-cl01 input + span {
+    padding: 0 0 0 32px;
+    display: inline-block;
+    position: relative;
+}
+.contact form .agree .checkbox-cl01 input + span::after,
+.contact form .agree .checkbox-cl01 input + span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+}
+.contact form .agree .checkbox-cl01 input + span::before {
+    border: 1px solid rgba(51, 51, 51, 0.5);
+    background: #fff;
+    height: 20px;
+    width: 20px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.contact form .agree .checkbox-cl01 input + span::after {
+    border: none;
+    background-image: url(./img/contact/icon-check.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 11px;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    display: none;
+}
+.contact form .agree .checkbox-cl01 input:checked + span::after {
+    display: block;
+}
+.contact form .submitWrap {
+    display: flex;
+    justify-content: center;
+    gap: 0 20px;
+}
+@media screen and (max-width: 767px) {
+    .contact form .submitWrap {
+        gap: 0 10px;
+    }
+}
+.contact form .submitWrap li {
+    width: 410px;
+    background: #75CC00;
+    transition: 0.5s;
+    position: relative;
+}
+@media screen and (max-width: 767px) {
+    .contact form .submitWrap li {
+        width: 100%;
+    }
+}
+.contact form .submitWrap li:hover {
+    background: #11aadd;
+}
+.contact form .submitWrap li::after {
+    content: "";
+    display: block;
+    background-image: url(./img/contact/arrow.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%);
+}
+@media screen and (max-width: 767px) {
+    .contact form .submitWrap li::after {
+        width: 11px;
+        height: 11px;
+    }
+}
+.contact form .submitWrap li .wpcf7-submit,
+.contact form .submitWrap li .wpcf7-previous {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    width: 100%;
+    padding: 30px;
+    border: none;
+    background: none;
+}
+@media screen and (max-width: 767px) {
+    .contact form .submitWrap li .wpcf7-submit,
+    .contact form .submitWrap li .wpcf7-previous {
+        font-size: 14px;
+        padding: 20px;
+    }
+}
+.contact form .submitWrap li .wpcf7-spinner {
+    display: none;
+}
+.contact form .submitWrap .previous {
+    width: 205px;
+    background: rgba(51, 51, 51, 0.3);
+}
+@media screen and (max-width: 767px) {
+    .contact form .submitWrap .previous {
+        width: 100px;
+    }
+}
+.contact form .submitWrap .previous::after {
+    background-image: none;
+}
+.contact form .wpcf7-not-valid-tip {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #e31c1c;
+    margin: 10px 0 0 0;
+}
+@media screen and (max-width: 767px) {
+    .contact form .wpcf7-not-valid-tip {
+        font-size: 12px;
+        margin: 5px 0 0 0;
+    }
+}
+.contact form .wpcf7-response-output {
+    font-size: 16px;
+    font-weight: bold;
+    color: #e31c1c;
+    margin: 40px 0 0 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+@media screen and (max-width: 767px) {
+    .contact form .wpcf7-response-output {
+        font-size: 12px;
+        margin: 20px 0 0 0 !important;
+    }
+}
+
+.underPage {
+    text-align: center;
+    margin: 100px auto 0;
+}
+@media screen and (max-width: 767px) {
+    .underPage {
+        margin: 90px auto 0;
     }
 }

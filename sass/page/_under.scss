@@ -1,0 +1,9 @@
+@use "../utils/utils" as *;
+
+.underPage {
+    text-align: center;
+    margin: 100px auto 0;
+    @include mq() {
+        margin: 90px auto 0;
+    }
+}

@@ -63,17 +63,18 @@
         <meta property="og:description" content="This is post page" />
     <?php endif;?>
     
-    <?php // if (
-        // isset($post) && 
-        // ($post->post_name === 'contact' || 
-        // $post->post_name === 'confirm' || 
-        // $post->post_name === 'thanks')
-    // ): ?>
-        <!-- <title>Contact</title>
+    <?php  if (
+        isset($post) && 
+        ($post->post_name === 'contact' || 
+        $post->post_name === 'wpcf7-contact' || 
+        $post->post_name === 'confirm' || 
+        $post->post_name === 'thanks')
+     ): ?>
+        <title>Contact</title>
         <meta property="og:title" content="Contact">
         <meta name="description" content="This is contact page">
-        <meta property="og:description" content="This is contact page" /> -->
-    <?php // endif;?>
+        <meta property="og:description" content="This is contact page" />
+    <?php endif;?>
 
     <!-- Lightbox -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />

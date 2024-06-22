@@ -13,7 +13,7 @@
         </div>
         <ul class="headerMenu">
             <li><a href="<?=$site_url;?>" class="<?=$active = ($server_uri === '/') ? 'active' : ''; ?>">トップ</a></li>
-            <li><a href="<?=$site_url;?>/post" class="<?php echo isset($post) && $post->post_type === 'post' ? 'active' : ''; ?>">最新情報</a></li>
+            <li><a href="<?=$site_url;?>/post/" class="<?=$active = ($server_uri === '/post/') ? 'active' : ''; ?>">投稿</a></li>
             <li class="megaMenu">
                 <a href="">ご利用サポート</a>
                 <div class="megaMenuSecond">

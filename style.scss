@@ -29,7 +29,10 @@
 @use "sass/parts/splash/splash";
 @use "sass/parts/swiper/swiper";
 @use "sass/parts/baloon/baloon";
+@use "sass/parts/notfound";
 
 // 各種Mainページ
 @use "./sass/page/top";
 @use "./sass/page/post";
+@use "./sass/page/contact";
+@use "./sass/page/under";

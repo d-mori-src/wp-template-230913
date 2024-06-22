@@ -22,7 +22,7 @@
     <?php // get_template_part('components/parts/sticky/sticky01'); ?>
     <?php // get_template_part('components/parts/swiper/swiper01'); ?>
     <?php //get_template_part('components/parts/swiper/swiper02'); ?>
-    <?php get_template_part('components/parts/baloon/baloon'); ?>
+    <?php // get_template_part('components/parts/baloon/baloon'); ?>
 </main>
 
 <?php get_footer(); ?>

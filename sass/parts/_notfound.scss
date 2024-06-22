@@ -1,0 +1,57 @@
+@use "../utils/utils" as *;
+
+.notfoundPage {
+    .notfound {
+        width: calc(100% - 100px);
+        max-width: 680px;
+        margin: 160px auto 80px;
+        @include mq() {
+            width: calc(100% - 40px);
+            margin: 80px auto 40px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 48px;
+            font-weight: 500;
+            font-family: 'Josefin Sans', sans-serif;
+            margin: 0 0 40px 0;
+            @include mq() {
+                font-size: 32px;
+            }
+            span {
+                display: block;
+                font-size: 16px;
+                margin: 12px 0 0 0;
+                @include mq() {
+                    font-size: 12px;
+                    margin: 6px 0 0 0;
+                }
+            }
+        }
+        ul {
+            padding: 32px 40px;
+            background: rgba($base-color, 0.1);
+            @include mq() {
+                padding: 24px;
+            }
+            li {
+                display: flex;
+                text-align: justify;
+                font-size: 16px;
+                line-height: 1.5;
+                letter-spacing: 0;
+                margin: 0 0 8px 0;
+                @include mq() {
+                    font-size: 12px;
+                    margin: 0 0 4px 0;
+                }
+                span {
+                    margin: 0 4px 0 0;
+                }
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

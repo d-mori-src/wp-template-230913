@@ -1,0 +1,352 @@
+@use "../utils/utils" as *;
+
+.contact-original-01 {
+    // ナビゲーション
+    .intro {
+        width: calc(100% - 40px);
+        margin: 0 auto 100px;
+        @include mq() {
+            margin: 0 auto 40px;
+        }
+        ul {
+            display: flex;
+            justify-content: center;
+            li {
+                .icon {
+                    color: #BFBFBF;
+                    margin: 0 0 13px 0;
+                    padding: 20px;
+                    border: 1px solid rgba($color: $base-color, $alpha: 0.1);
+                    border-radius: 50%;
+                    background: rgba($color: $base-color, $alpha: 0.1);
+                    @include mq() {
+                        padding: 16px;
+                    }
+                }
+                .text {
+                    text-align: center;
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: $base-color;
+                    @include mq() {
+                        font-size: 11px;
+                    }
+                }
+            }
+            li.border {
+                width: 110px;
+                bottom: 48px;
+                border-bottom: 1px solid rgba($color: $base-color, $alpha: 0.1);
+                position: relative;
+                @include mq() {
+                    width: 80px;
+                    bottom: 41px;
+                }
+            }
+            li.active {
+                .icon {
+                    color: #fff;
+                    background: $primary-color;
+                }
+                .text {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
+    form {
+        width: calc(100% - 100px);
+        max-width: 1100px;
+        margin: 0 auto;
+        @include mq() {
+            width: calc(100% - 40px);
+        }
+        .formWrap { // ul
+            margin: 0 0 80px 0;
+            @include mq() {
+                margin: 0 0 40px 0;
+            }
+            .formSet { // li
+                display: flex;
+                justify-content: space-between;
+                text-align: left;
+                margin: 0 0 20px 0;
+                padding: 0 40px 20px;
+                border-bottom: 1px solid rgba($color: $base-color, $alpha: 0.1);
+                @include mq() {
+                    flex-direction: column;
+                    gap: 10px 0;
+                    padding: 0 0 20px;
+                }
+                &:first-child {
+                    padding: 20px 40px;
+                    border-top: 1px solid rgba($color: $base-color, $alpha: 0.1);
+                    @include mq() {
+                        padding: 20px 0;
+                    }
+                }
+                &:last-child {
+                    margin: 0;
+                }
+                .label {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    font-size: 16px;
+                    font-weight: bold;
+                    width: 28%;
+                    @include mq() {
+                        justify-content: flex-start;
+                        gap: 0 20px;
+                        width: 100%;
+                    }
+                    span {
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: $white-color;
+                        padding: 6px 12px 7px;
+                        border-radius: calc(Infinity * 1px);
+                        background: $danger-color;
+                        @include mq() {
+                            font-size: 12px;
+                            padding: 4px 10px 5px;
+                        }
+                    }
+                }
+                .inputWrap {
+                    width: 68%;
+                    @include mq() {
+                        width: 100%;
+                    }
+                    input,
+                    select,
+                    textarea {
+                        font-size: 16px;
+                        line-height: 1.4;
+                        width: 100%;
+                        padding: 20px 30px;
+                        border: none;
+                        outline: none;
+                        border-radius: 5px;
+                        background: rgba($color: $base-color, $alpha: 0.1);
+                        @include mq() {
+                            font-size: 12px;
+                            padding: 16px 18px;
+                        }
+                    }
+                    select {
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                    }
+                    textarea {
+                        resize: vertical;
+                        height: 290px;
+                        @include mq() {
+                            height: 335px;
+                        }
+                    }
+                    .explanation {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4px 0;
+                        margin: 12px 0 0 0;
+                        li {
+                            display: flex;
+                            gap: 0 4px;
+                            font-size: 12px;
+                            a {
+                                color: $primary-color;
+                                padding: 0 0 2px 0;
+                                border-bottom: 1px dashed $primary-color;
+                            }
+                        }
+                    }
+                    .result {
+                        font-size: 12px;
+                        font-weight: bold;
+                        margin: 12px 0 0 0;
+                    }
+                    .error {
+                        font-size: 12px;
+                        font-weight: bold;
+                        color: $danger-color;
+                        margin: 12px 0 0 0;
+                    }
+                }
+                .selectWrap {
+                    position: relative;
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 10px;
+                        height: 10px;
+                        border: 1px solid;
+                        border-color:  transparent transparent rgba($color: $base-color, $alpha: 0.5) rgba($color: $base-color, $alpha: 0.5);
+                        position: absolute;
+                        top: 50%;
+                        right: 30px;
+                        transform: translateY(-50%) rotate(-45deg);
+                        pointer-events: none;
+                        @include mq() {
+                            width: 5px;
+                            height: 5px; 
+                            right: 18px;
+                        }
+                    }
+                }
+                .fileWrap {
+                    input {
+                        padding: 0;
+                        background: none;
+                    }
+                    input[type="file"] {
+                        color: rgba($color: $base-color, $alpha: 0.8);
+                        cursor: pointer;
+                        border: 1px solid rgba($color: $base-color, $alpha: 0.1);
+                        width: 100%;
+                    }
+                    ::file-selector-button,
+                    ::-webkit-file-upload-button {
+                        background-color: rgba($color: $base-color, $alpha: 0.1);
+                        color: rgba($color: $base-color, $alpha: 0.8);
+                        border: none;
+                        cursor: pointer;
+                        border-right: 1px solid rgba($color: $base-color, $alpha: 0.1);
+                        padding: 20px 40px;
+                        margin: 0 40px 0 0;
+                    }
+                }
+            }
+            .textareaSet {
+                align-items: flex-start;
+            }
+        }
+        .agree {
+            font-size: 16px;
+            margin: 0 0 80px 0;
+            @include mq() {
+                font-size: 14px;
+                margin: 0 0 40px 0;
+            }
+            .privacy-policy {
+                width: 100%;
+                margin: 0 auto 40px;
+                padding: 60px;
+                border: 1px solid $base-color;
+                @include mq() {
+                    padding: 40px 30px;
+                }
+                h3 {
+                    font-size: 18px;
+                    margin: 0 0 24px 0;
+                    @include mq() {
+                        text-align: left;
+                        font-size: 16px;
+                        margin: 0 0 16px 0;
+                    }
+                }
+                p {
+                    text-align: justify;
+                    font-size: 14px;
+                    line-height: 2;
+                    @include mq() {
+                        font-size: 12px;
+                        line-height: 1.7;
+                    }
+                }
+            }
+            .checkbox {
+                li {
+                    input[type="checkbox"] {
+                        position: relative;
+                        width: 20px;
+                        height: 20px;
+                        border: 1px solid #000;
+                        -webkit-appearance: none;
+                           -moz-appearance: none;
+                                appearance: none;
+                    }
+                    input[type="checkbox"]:checked:before {
+                        position: absolute;
+                        top: 0;
+                        left: 4px;
+                        transform: rotate(50deg);
+                        width: 8px;
+                        height: 12px;
+                        border-right: 1px solid #000;
+                        border-bottom: 1px solid #000;
+                        content: '';
+                    }
+                    .agreeLabel {
+                        padding: 0 0 0 10px;
+                        position: relative;
+                        top: -4px;
+                    }
+                }
+            }
+            .error {
+                font-size: 12px;
+                font-weight: bold;
+                color: $danger-color;
+                margin: 12px 0 0 0;
+            }
+        }
+        .submitWrap {
+            display: flex;
+            justify-content: center;
+            gap: 0 20px;
+            li {
+                input {
+                    display: block;
+                    font-size: 18px;
+                    color: $white-color;
+                    width: 205px;
+                    padding: 30px 40px;
+                    border: none;
+                    background: rgba($color: $base-color, $alpha: 0.3);
+                    transition: .5s;
+                    &:hover {
+                        background: $secondary-color;
+                    }
+                    @include mq() {
+                        font-size: 14px;
+                        width: 120px;
+                        padding: 20px;
+                    }
+                }
+            }
+            .send {
+                input {
+                    width: 410px;
+                    background: $primary-color;
+                    @include mq() {
+                        width: 100%;
+                    }
+                }
+                position: relative;
+                &::after {
+                    content: "";
+                    display: block;
+                    background-image: url(./img/contact/arrow.webp);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    width: 15px;
+                    height: 15px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 20px;
+                    @include mq() {
+                        width: 10px;
+                        height: 10px;
+                    }
+                }
+                @include mq() {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

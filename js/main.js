@@ -18,6 +18,9 @@ $(function() {
     // アコーディオンボックス
     accordionBox();
 
+    // 姓名を入力するとふりがなが自動で入力
+    $.fn.autoKana('#fullname', '#furigananame', { katakana: true });
+
     // $(window).on('load',function(){
     //     $('#splate').delay(200).animate(
     //         {'opacity': 1},{duration: 500}

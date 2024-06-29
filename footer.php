@@ -27,6 +27,9 @@
     <!-- swiper -->
     <script src="<?= $uri ?>/js/swiper-bundle.min.js"></script>
     <script src="<?= $uri ?>/js/swiper.js"></script>
+
+    <!-- ふりがな自動生成 -->
+    <script src="<?= $uri ?>/js/jquery.autoKana.js"></script>
   <?php wp_footer(); ?>
   </body>
 </html>

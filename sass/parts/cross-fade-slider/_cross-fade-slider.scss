@@ -1,0 +1,104 @@
+@use "../../utils/utils" as *;
+
+.image-wrapper {
+    width: 100%;
+    height: 670px;
+    position: relative;
+    margin: 0 0 120px 0;
+
+    @include mq() {
+        height: 560px;
+        margin: 0 0 60px 0;
+    }
+
+    .title {
+        position: absolute;
+        right: 80px;
+        bottom: 30px;
+        z-index: 1000;
+
+        @include mq() {
+            right: 30px;
+            bottom: 10px;
+        }
+
+        font-size: 60px;
+        font-weight: 400;
+        line-height: 1.4;
+        letter-spacing: 2px;
+        color: $white-color;
+
+        @include mq() {
+            font-size: 38px;
+            letter-spacing: 6px;
+        }
+
+        span {
+            display: block;
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0 0 20px 10px;
+
+            @include mq() {
+                font-size: 11px;
+                letter-spacing: 1.5px;
+                margin: 0 0 20px 10px;
+            }
+
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 20px;
+                height: 1px;
+                margin: 0 20px 0 0;
+                border-bottom: 1px solid $white-color;
+                position: relative;
+                bottom: 4px;
+            }
+        }
+    }
+
+    .image-crossfader {
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+
+        .image-crossfader-inner {
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0;
+            transform: scale(1.1);
+            transition:
+                opacity 1s cubic-bezier(0.455, 0.03, 0.515, 0.955),
+                transform 5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        }
+    }
+
+    .image-crossfader-inner.is-visible {
+        z-index: 1;
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .image-crossfader-inner:nth-child(1) {
+        background-image: url('https://picsum.photos/id/237/800/600');
+
+        @include mq() {
+            background-image: url('https://picsum.photos/id/237/800/600')
+        }
+    }
+
+    .image-crossfader-inner:nth-child(2) {
+        background-image: url('https://picsum.photos/id/238/800/600');
+
+        @include mq() {
+            background-image: url('https://picsum.photos/id/238/800/600')
+        }
+    }
+}

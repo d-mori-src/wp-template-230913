@@ -23,7 +23,7 @@
     <?php // get_template_part('components/parts/swiper/swiper01'); ?>
     <?php // get_template_part('components/parts/swiper/swiper02'); ?>
     <?php // get_template_part('components/parts/baloon/baloon'); ?>
-    <?php // get_template_part('components/parts/cross-fade-slider/cross-fade-slider'); ?>
+    <?php get_template_part('components/parts/cross-fade-slider/cross-fade-slider'); ?>
 </main>
 
 <?php get_footer(); ?>

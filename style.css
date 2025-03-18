@@ -3411,26 +3411,75 @@ img {
     transform: scale(1.1);
     transition: opacity 1s cubic-bezier(0.455, 0.03, 0.515, 0.955), transform 5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
-.image-wrapper .image-crossfader-inner.is-visible {
+.image-wrapper .image-crossfader .image-crossfader-inner:nth-child(1) {
+    background-image: url("https://picsum.photos/id/237/800/600");
+}
+@media screen and (max-width: 767px) {
+    .image-wrapper .image-crossfader .image-crossfader-inner:nth-child(1) {
+        background-image: url("https://picsum.photos/id/237/800/600");
+    }
+}
+.image-wrapper .image-crossfader .image-crossfader-inner:nth-child(2) {
+    background-image: url("https://picsum.photos/id/238/800/600");
+}
+@media screen and (max-width: 767px) {
+    .image-wrapper .image-crossfader .image-crossfader-inner:nth-child(2) {
+        background-image: url("https://picsum.photos/id/238/800/600");
+    }
+}
+.image-wrapper .image-crossfader .image-crossfader-inner:nth-child(3) {
+    background-image: url("https://picsum.photos/id/239/800/600");
+}
+@media screen and (max-width: 767px) {
+    .image-wrapper .image-crossfader .image-crossfader-inner:nth-child(3) {
+        background-image: url("https://picsum.photos/id/239/800/600");
+    }
+}
+.image-wrapper .image-crossfader .is-visible {
     z-index: 1;
     opacity: 1;
     transform: scale(1);
 }
-.image-wrapper .image-crossfader-inner:nth-child(1) {
-    background-image: url("https://picsum.photos/id/237/800/600");
+.image-wrapper .dots-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    z-index: 1000;
 }
-@media screen and (max-width: 767px) {
-    .image-wrapper .image-crossfader-inner:nth-child(1) {
-        background-image: url("https://picsum.photos/id/237/800/600");
-    }
+.image-wrapper .dots-container .dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
 }
-.image-wrapper .image-crossfader-inner:nth-child(2) {
-    background-image: url("https://picsum.photos/id/238/800/600");
+.image-wrapper .dots-container .is-active {
+    background-color: #333;
 }
-@media screen and (max-width: 767px) {
-    .image-wrapper .image-crossfader-inner:nth-child(2) {
-        background-image: url("https://picsum.photos/id/238/800/600");
-    }
+.image-wrapper .arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 1000;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    padding: 15px 0 0 0;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+.image-wrapper .prev {
+    left: 20px;
+}
+.image-wrapper .next {
+    right: 20px;
 }
 
 .top {

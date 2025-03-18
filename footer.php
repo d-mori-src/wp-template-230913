@@ -30,6 +30,8 @@
 
     <!-- ふりがな自動生成 -->
     <script src="<?= $uri ?>/js/jquery.autoKana.js"></script>
+
+    <script src="<?= $uri ?>/js/crossfader-slide.js"></script>
   <?php wp_footer(); ?>
   </body>
 </html>

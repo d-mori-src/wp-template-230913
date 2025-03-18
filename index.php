@@ -8,6 +8,10 @@
 <?php // get_template_part('components/parts/splash/splash01'); ?>
 
 <main class="top">
+    <div class="image-wrapper">
+        <h1 class="title"></h1>
+        <div class="image-crossfader"></div>
+    </div>
     <?php // get_template_part('components/parts/mega/mega01'); ?>
     <?php // get_template_part('components/parts/mega/mega02'); ?>
     <?php // get_template_part('components/parts/card/card01'); ?>
@@ -23,7 +27,6 @@
     <?php // get_template_part('components/parts/swiper/swiper01'); ?>
     <?php // get_template_part('components/parts/swiper/swiper02'); ?>
     <?php // get_template_part('components/parts/baloon/baloon'); ?>
-    <?php get_template_part('components/parts/cross-fade-slider/cross-fade-slider'); ?>
 </main>
 
 <?php get_footer(); ?>

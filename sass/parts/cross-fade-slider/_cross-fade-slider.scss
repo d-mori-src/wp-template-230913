@@ -79,26 +79,27 @@
                 transform 5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 
             &:nth-child(1) {
-                background-image: url('https://picsum.photos/id/237/800/600');
+                background-image: url('./img/parts/slide/image1.jpg');
+                // https://picsum.photos/id/237/800/600
 
                 @include mq() {
-                    background-image: url('https://picsum.photos/id/237/800/600')
+                    background-image: url('./img/parts/slide/image1.jpg')
                 }
             }
 
             &:nth-child(2) {
-                background-image: url('https://picsum.photos/id/238/800/600');
+                background-image: url('./img/parts/slide/image2.jpg');
 
                 @include mq() {
-                    background-image: url('https://picsum.photos/id/238/800/600')
+                    background-image: url('./img/parts/slide/image2.jpg')
                 }
             }
 
             &:nth-child(3) {
-                background-image: url('https://picsum.photos/id/239/800/600');
+                background-image: url('./img/parts/slide/image3.jpg');
 
                 @include mq() {
-                    background-image: url('https://picsum.photos/id/239/800/600')
+                    background-image: url('./img/parts/slide/image3.jpg')
                 }
             }
         }
